@@ -1,0 +1,17 @@
+article {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    font-style: normal;
+    color:$text-black;
+    p {
+        font-weight: inherit;
+        font-size: inherit;  
+    }
+    figure {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 21px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,49 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    .page-item {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 140%;
+        a {
+            border-radius: 8px;
+            min-width: 40px;
+            height: 40px;
+            padding: 0px 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color:$text-black;
+            transition: 0.3s ease-in-out background-color;
+            &:hover {
+                background-color: $bg-gray;
+            }
+        }
+        &.active {
+            a {
+                background-color: $bg-gray;
+            }
+        }
+        & + .page-item {
+            margin-left: 8px;
+        }
+    }
+
+}
+
+.pagination-controls {
+    .page-item {
+        a {
+            padding: 0px 15px;
+            background-color: $bg-gray;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.order-widget {
+
+		&__products {
+			.order-product {
+				& + .order-product {
+					margin-top: 28px;
+				}
+			}
+		}
+
+		// .order-widget__info
+
+		&__info {
+		}
+}
+

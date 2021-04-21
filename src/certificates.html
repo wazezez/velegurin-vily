@@ -1,0 +1,136 @@
+<extends src="../layouts/app.html">
+    <!-- Page Content -->
+    <block name="content">
+        <!-- Section -->
+        <section class="page-breadcrumbs" id="page-breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <nav role="navigation" class="breadcrumbs" itemscope itemtype="http://schema.org/Breadcrumb">
+                            <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+                              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="/">
+                                    <span itemprop="name">Главная страница</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                              </li>
+                              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="certificates.html" class="current">
+                                    <span itemprop="name">Подарочные сертификаты</span>
+                                </a>
+                                <meta itemprop="position" content="2" />
+                              </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Section -->
+        <!-- Page Content -->
+        <section class="page-content page-certificates" id="page-certificates">
+            <div class="content-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <article>
+                                <h1>Подарочные сертификаты</h1>
+                                <p>Вили.ру – это независимый тематический Интернет-ресурс, созданный московскими экспертами в коврах и декораторами интерьеров. Наша задача – как можно больше рассказать о ковре и его роли в интерьере. В блоге Вы найдёте статьи о современных трендах в дизайне интерьеров, прочитаете о том, как правильно подобрать ковер, поймете, как именно формируется стоимость ковра. Также у нас Вы можете ознакомиться с лучшими предложениями от наших партнеров, среди которых представлено более 40 салонов ковров. Представленный выбор ковров на нашем сайте является самым полным в России, что позволяет подобрать ковёр в любой интерьер.</p>
+                                <form class="form certificate-form">
+                                    <fieldset class="form__fieldset">
+                                        <legend>Выберите сертификат</legend>
+                                        <div class="certificate-select">
+                                            <div class="certificate-select__item">
+                                                <!-- Certificate Checkbox -->
+                                                <div class="certificate-checkbox">
+                                                    <input type="radio" name="certificate" id="certificate-1">
+                                                    <label for="certificate-1">
+                                                        <div class="certificate-card">
+                                                            <picture>
+                                                                <img  srcset="/assets/images/certificate-1@2x.jpg"
+                                                                      src="/assets/images/certificate-1.jpg" alt="Сертификат 1">
+                                                              </picture>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- /Certificate Checkbox -->
+                                            </div>
+                                            <!-- /.certificate-select__item -->
+                                            <div class="certificate-select__item">
+                                                <!-- Certificate Checkbox -->
+                                                <div class="certificate-checkbox">
+                                                    <input type="radio" name="certificate" id="certificate-2">
+                                                    <label for="certificate-2">
+                                                        <div class="certificate-card">
+                                                            <picture>
+                                                                <img  srcset="/assets/images/certificate-2@2x.jpg"
+                                                                        src="/assets/images/certificate-2.jpg" alt="Сертификат 2">
+                                                                </picture>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- /Certificate Checkbox -->
+                                            </div>
+                                            <!-- /.certificate-select__item -->
+                                            <div class="certificate-select__item">
+                                                <!-- Certificate Checkbox -->
+                                                <div class="certificate-checkbox">
+                                                    <input type="radio" name="certificate" id="certificate-3">
+                                                    <label for="certificate-3">
+                                                        <div class="certificate-card">
+                                                            <picture>
+                                                                <img  srcset="/assets/images/certificate-3@2x.jpg"
+                                                                      src="/assets/images/certificate-3.jpg" alt="Сертификат 3">
+                                                              </picture>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <!-- /Certificate Checkbox -->
+                                            </div>
+                                            <!-- /.certificate-select__item -->
+                                            
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form__fieldset">
+                                        <legend>Данные получателя</legend>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="input-field">
+                                                    <input type="text" placeholder="Укажите свое имя">
+                                                    <label>ФИО</label>
+                                                </div>
+                                                <div class="input-field">
+                                                    <input type="tel" placeholder="Укажите свой номер телефона">
+                                                    <label>Контактный номер телефона</label>
+                                                </div>
+                                                <div class="input-field">
+                                                    <input type="email" placeholder="Укажите свой email">
+                                                    <label>E-mail</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="textarea-field">
+                                                    <textarea placeholder="Укажите свой комментарий"></textarea>
+                                                    <label>Укажите комментарий</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="certificate-form__action">
+                                                    <button type="submit" class="button">Заказать сертификат</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-section -->
+        </section>
+        <!-- /Page Content -->
+    </block>    
+</extends>

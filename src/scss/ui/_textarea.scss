@@ -1,0 +1,14 @@
+
+textarea {
+    @include input-style;
+    height: auto;
+    line-height: 1.3;
+}
+
+.textarea-field {
+    @extend .input-field;
+    textarea {
+        padding-bottom: 8px;
+        padding-top: 24px;
+    }
+}

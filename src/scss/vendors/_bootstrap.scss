@@ -1,0 +1,39 @@
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px,
+);
+
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/utilities/spacing";
+
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/modal";
+/*
+This is an example to show how you can import just the bootstrap styles that you need
+In this example we load the bootstrap grid + modal + carousel
+
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/mixins/transition";
+@import "../../node_modules/bootstrap/scss/mixins/border-radius";
+@import "../../node_modules/bootstrap/scss/mixins/hover";
+@import "../../node_modules/bootstrap/scss/mixins/box-shadow";
+@import "../../node_modules/bootstrap/scss/mixins/caret";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/carousel";
+*/
+
+// $grid-breakpoints: (
+//         xs: 0,
+//         sm: 576px,
+//         md: 768px,
+//         lg: 992px,
+//         xl: 1200px,
+//         xxl: 1900px
+// );

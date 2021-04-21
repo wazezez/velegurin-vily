@@ -1,0 +1,155 @@
+<extends src="../layouts/app.html">
+    <!-- Page Content -->
+    <block name="content">
+        <!-- Section -->
+        <section class="page-breadcrumbs" id="page-breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <nav role="navigation" class="breadcrumbs" itemscope itemtype="http://schema.org/Breadcrumb">
+                            <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+                              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="/">
+                                    <span itemprop="name">Главная страница</span>
+                                </a>
+                                <meta itemprop="position" content="1" />
+                              </li>
+                              <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="catalog.html" class="current">
+                                    <span itemprop="name">Корзина</span>
+                                </a>
+                                <meta itemprop="position" content="2" />
+                              </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Section -->
+        <!-- Page Content -->
+        <section class="page-content page-cart" id="page-cart">
+            <div class="content-section">
+                <div class="container">
+                    <div class="order-widget">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <h1>Корзина</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-9">
+                                <div class="order-widget__products">
+                                    <include src="../partials/order-product-card.html"></include>
+                                    <include src="../partials/order-product-card.html"></include>
+                                    <include src="../partials/order-product-card.html"></include>
+                                    <include src="../partials/order-product-card.html"></include>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="order-widget__info order-info">
+                                    <div class="order-info__title">
+                                        Ваш заказ
+                                    </div>
+                                    <!-- /.order-info__title -->
+                                    <div class="order-info__listing">
+                                        <div class="order-info__item">
+                                            Товары, 1шт
+                                            <span class="order-info__price">
+                                                348 889 ₽
+                                            </span>
+                                        </div>
+                                        <!-- /.order-info__item -->
+                                        <div class="order-info__item text-red">
+                                            Скидка:
+                                            <span class="order-info__price">
+                                                -17 000 ₽
+                                            </span>
+                                        </div>
+                                        <!-- /.order-info__item -->
+                                        <div class="order-info__item">
+                                            Доставка:
+                                            <span class="order-info__price">
+                                                0 ₽
+                                            </span>
+                                        </div>
+                                        <!-- /.order-info__item -->
+                                    </div>
+                                    <!-- /.order-info__listing -->
+                                    <div class="order-info__total">
+                                        Итого
+                                        <span class="order-info__price">
+                                            325 889 ₽
+                                        </span>
+                                    </div>
+                                    <!-- /.order-info__total -->
+                                    <div class="order-info__action">
+                                        <button class="order-info__button button">
+                                            Перейти к оформлению
+                                        </button>
+                                    </div>
+                                    <!-- /.order-info__action -->
+                                    <div class="order-info__agreement">
+                                        <div class="agreement">
+                                            <div class="checkbox">
+                                                <input type="checkbox" name="agreement" id="order-agreement" checked>
+                                                <label for="order-agreement">
+                                                    Согласен с условиями <a href="" title="Правила пользования">Правил пользования интернет-магазина и правилами возврата</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.order-info__agreement -->
+                                </div>
+                                <!-- /.order-widget__info -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.catalog-section -->
+                </div>
+            </div>
+            <!-- /.content-section -->
+
+            <div class="content-section content-section_bordertop">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <h2>Рекомендуем добавить к заказу</h2>
+                      <div class="content-section__description">Вили.ру – это независимый тематический Интернет-ресурс, созданный московскими экспертами в коврах и декораторами интерьеров.Наша задача – как можно больше рассказать о ковре и его роли в интерьере.</div>
+                      <div class="content-section__entries">
+                        <div class="slider">
+                          <div class="slider__widget js-products-slider" id="recommentation-slider">
+                            <include src="../partials/short-product-card.html"></include>
+                            <include src="../partials/short-product-card.html"></include>
+                            <include src="../partials/short-product-card.html"></include>
+                            <include src="../partials/short-product-card.html"></include>
+                            <include src="../partials/short-product-card.html"></include>
+                            <include src="../partials/short-product-card.html"></include>
+                          </div>
+                          <!-- /.slider__widget -->
+                          <div class="slider__nav">
+                            <button class="slider-button js-slider-prev" data-slider="#recommentation-slider">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 12.5523 19.5523 13 19 13L7.83 13L12.7104 17.8804C13.1019 18.2719 13.1004 18.9074 12.7075 19.2975C12.3166 19.6857 11.6849 19.6849 11.2954 19.2954L4.70711 12.7071C4.31658 12.3166 4.31658 11.6834 4.70711 11.2929L11.2947 4.70531C11.6842 4.31578 12.3158 4.31578 12.7053 4.70531C13.0946 5.0946 13.0949 5.72568 12.7059 6.11531L7.83 11L19 11C19.5523 11 20 11.4477 20 12Z" fill="#333333"/>
+                              </svg>                    
+                            </button>
+                            <button class="slider-button js-slider-next" data-slider="#recommentation-slider">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11L16.17 11L11.2896 6.11961C10.8981 5.72811 10.8996 5.09262 11.2925 4.70251C11.6834 4.31434 12.3151 4.31506 12.7046 4.70461L19.2929 11.2929C19.6834 11.6834 19.6834 12.3166 19.2929 12.7071L12.7053 19.2947C12.3158 19.6842 11.6842 19.6842 11.2947 19.2947C10.9054 18.9054 10.9051 18.2743 11.2941 17.8847L16.17 13L5 13C4.44771 13 4 12.5523 4 12Z" fill="#333333"/>
+                              </svg>
+                            </button>
+                          </div>
+                          <!-- /.slider__nav -->
+                        </div>
+                        <!-- /.slider -->
+                      </div>
+                      <!-- /.content-section__entries -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.content-section -->
+        </section>
+        <!-- /Page Content -->
+    </block>    
+</extends>

@@ -1,0 +1,31 @@
+
+.input-field {
+    position: relative;
+    label {
+        position: absolute;
+        top: 4px;
+        left: 16px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        color:rgba($text-black,.5);
+    }
+    input {
+        padding-bottom: 8px;
+        &[type=text],
+        &[type=tel],
+        &[type=password],
+        &[type=email]  {
+            padding-top: 12px;
+        }
+    }
+}
+
+input {
+    &[type=text],
+    &[type=tel],
+    &[type=password],
+    &[type=email] {
+        @include input-style;
+    }
+}

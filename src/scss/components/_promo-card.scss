@@ -1,0 +1,54 @@
+.promo-card {
+    display: flex;
+    flex-direction: row;    
+    background-size: cover;
+    height: 444px;
+    padding: 60px;
+    border-radius: 12px;
+    width: 1200px; 
+    margin: 0px 15px;
+    @include media-breakpoint-down(lg) {
+        max-width: 960px;
+    }
+    @include media-breakpoint-down(md) {
+        max-width: 720px;
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 540px;
+    }
+    @include media-breakpoint-down(xs) {
+        max-width: 100vw;
+    }
+    &__content {
+        width: 55%;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 109%;
+        margin-bottom: 23px;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    &__action {
+        margin-top: 45px;
+        .button {
+            height: 56px;
+            font-size: 18px;
+        }
+    }
+    &_white {
+        color:#fff;
+        .button {
+            background: #fff;
+            color:$text-black;
+        }
+    }
+}
+

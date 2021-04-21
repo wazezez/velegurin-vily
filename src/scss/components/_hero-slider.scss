@@ -1,0 +1,15 @@
+.hero-slider {
+    margin-top: 30px;
+    overflow: hidden;
+    &__item {
+        max-width: 1200px;
+    }
+    .slick-slide {
+        margin: 0 12px;
+        outline: 0px;
+    }
+
+    .slick-list {
+        margin: 0 -12px;
+    }
+}

@@ -1,0 +1,95 @@
+button {
+	cursor: pointer;
+}
+
+.button {
+	$height:56px;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: $height;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #FFFFFF;
+	padding: 0px 35px;
+	text-decoration: none;
+	background: linear-gradient(90.44deg, #7F10AD 26.83%, #540F9E 72.99%);
+	border:0px;
+	transition: 0.3s ease all;
+	transition-property: box-shadow, background-color;
+	cursor: pointer;
+	&:hover {
+		color:#fff;
+		text-decoration: none;
+		background: linear-gradient(90.44deg, #7F10AD 36.83%, #540F9E 62.99%);
+	}
+	&:focus {
+		outline:0px;
+		box-shadow: 0 0 0 3px rgba($primary-color,.25);
+	}
+	&_addtocart {
+
+	}
+	&_like {
+		width:$height;
+		background: $bg-gray;
+		padding: 0px 5px;
+		&:hover {
+			background: darken($bg-gray,5%);
+		}
+		&:focus {
+			box-shadow: 0 0 0 3px rgba(darken($bg-gray,10%),.25);
+		}
+	}
+
+	&_lightgray {
+		background: $bg-gray;
+		color: $text-black;
+		&:hover {
+			background: darken($bg-gray,7%);
+			color:$text-black;
+			// background: linear-gradient(90.44deg, #7F10AD 36.83%, #540F9E 62.99%);
+			// color: #fff;
+		}
+		&:focus {
+			box-shadow: 0 0 0 3px rgba(darken($bg-gray,10%),.25);
+		}
+	}
+	&_primary {
+		background: $primary-color;
+		color:#fff;
+		&:hover {
+			background: darken($primary-color,7%);
+		}
+	}
+	&_text-large {
+		font-size: 18px;
+	}
+	&_reset {
+		background: rgba(255, 21, 0, 0.04);
+		border: 1px solid rgba(255, 21, 0, 0.16);
+		border-radius: 8px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 175%;
+		color: #FF1500;
+		padding: 0px 16px;
+		&:hover {
+			background: rgba(255, 21, 0, 0.1);
+			color: #FF1500;
+		}
+		img {
+			margin-right: 9px;
+		}
+	}
+	&_gradient {
+        &_green {
+            background: linear-gradient(90.75deg, #00B09B 0%, #96C93D 98.31%);
+			&:hover {
+				background: linear-gradient(90.44deg, #00B09B 36.83%, #96C93D 62.99%);
+			}
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.form {
+    &__fieldset {
+        border:0px;
+        padding: 0;
+        legend {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 24px;
+        }
+        & + .form__fieldset {
+            margin-top: 58px;
+        }
+    }
+    input {
+        &[type=text],
+        &[type=tel],
+        &[type=password],
+        &[type=email] {
+            margin:8px 0px;
+        }        
+    }
+    textarea {
+        margin:8px 0px;
+    }
+    &__action {
+        margin-top: 30px;
+    }
+}
+
+
+.question-form {
+    .input-field {
+        margin: 16px 0px;
+    }
+    textarea {
+        min-height: 200px;
+    }
+    &__action {
+        margin-top: 17px;
+    }
+}
+
+.certificate-form {
+    margin-top: 50px;
+    @extend .question-form;
+    &__action {
+        margin-top: 17px;
+    }
+}

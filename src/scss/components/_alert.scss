@@ -1,0 +1,29 @@
+.alert {
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 16px;
+    border: 1px solid transparent;
+    &-success {
+        background: rgba(119, 184, 83, 0.08);
+        color: #77B853;
+        border-color: #77B853;
+    }
+    &-danger {
+        background: rgba($red, 0.08);
+        color: $red;
+        border-color: $red;
+    }
+    &-info {
+        background: rgba(#004085, 0.08);
+        color: #004085;
+        border-color: #004085;
+    }
+    &-warning {
+        background: rgba(yellow, 0.08);
+        color: darken(yellow,15%);
+        border-color:darken(yellow,15%);;
+    }
+}

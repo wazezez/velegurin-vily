@@ -1,0 +1,29 @@
+.slider-section {
+    position: relative;
+    &__nav {
+        width: 1240px;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+        pointer-events: none;
+        left: calc(50% + 15px);
+        transform: translateX(-50%);
+        @include media-breakpoint-down(lg) {
+            max-width: 960px;
+        }
+        @include media-breakpoint-down(md) {
+            max-width: 720px;
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: 540px;
+        }
+        @include media-breakpoint-down(xs) {
+            max-width: 100%;
+        }
+    }
+}

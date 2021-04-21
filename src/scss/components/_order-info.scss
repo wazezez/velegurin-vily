@@ -1,0 +1,77 @@
+.order-info {
+    background-color: #FFFFFF;
+    box-shadow: 0px 101px 130px rgba(0, 0, 0, 0.02), 0px 50.5493px 65.0635px rgba(0, 0, 0, 0.0152067), 0px 30.4485px 39.1912px rgba(0, 0, 0, 0.0130318), 0px 19.513px 25.1158px rgba(0, 0, 0, 0.0114179), 0px 12.6468px 16.278px rgba(0, 0, 0, 0.01), 0px 7.961px 10.2468px rgba(0, 0, 0, 0.0085821), 0px 4.57409px 5.88744px rgba(0, 0, 0, 0.00696822), 0px 2.01317px 2.59121px rgba(0, 0, 0, 0.00479335);
+    border-radius: 8px;
+    padding: 20px 16px;
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 41px;
+    }
+
+    &__listing {
+        margin-bottom: 57px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        & + & {
+            margin-top: 12px;
+        }
+    }
+
+    &__price {
+        font-size: 16px;
+    }
+
+    &__total {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .order-info__price {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+
+    &__action {
+        margin-top: 22px;
+    }
+
+    &__button {
+        padding: 0px 15px;
+        width: 100%;
+    }
+
+    &__agreement {
+        margin-top: 20px;
+        .checkbox {
+            label {
+                font-size: 12px;
+            }
+        }
+    }
+    &__status {
+        margin-top: 20px;
+        .alert {
+            & + .alert {
+                margin-top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.catalog-filter {
+    &__title {
+        padding: 16px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0;
+        border: 0px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid transparent;
+        transition: 0.1s ease-in-out border-color;
+        &:focus {
+            outline: 0px;
+        }
+        img {
+            transform: rotate(180deg);
+            transition: 0.2s ease-in transform;
+        }
+        &:not(.collapsed) {
+            color:$primary-color;
+            border-color:#ececec;
+            img {
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &__options {
+        
+    }
+    &__colors {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 16px;
+        margin-left: -6px;
+        .catalog-filter__option {
+            padding: 0px;
+            margin-left: 6px;
+        }
+    }
+    &__option {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    &__checkbox {
+        position: relative;
+        label {
+            cursor: pointer;
+            width: 100%;
+            position: relative;
+            display: flex;
+            padding: 16px 0px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            &:before,
+            &:after {
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                transform: translateY(-50%);
+                content: '';
+                border-radius: 50%;
+            }
+            &:before {
+                border:2px solid #E2E2E2;
+                transform: translateY(-50%);
+                transition: 0.3s ease-in-out border-color;
+            }
+            &:after {
+                background: url(../images/svg/icons/filter-checkbox-tick.svg) 50% 50% no-repeat;
+                opacity: 0;
+                transition: 0.3s ease-in-out opacity;
+            }
+        }
+        input[type=checkbox] {
+            width: 1px;
+            opacity: 0;
+            position: absolute;
+            pointer-events: none;
+            &:checked {
+                & + label {
+                    color:$primary-color;
+                    &:before {
+                        border-color: $primary-color;
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

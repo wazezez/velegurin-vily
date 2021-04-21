@@ -1,0 +1,117 @@
+.page-footer {
+    background-color: $bg-gray;
+    h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        color: $text-black;
+        margin-bottom: 13px;
+    }
+    &__nav {
+        border-bottom: 1px solid $bg-light-gray;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 30px 0px;
+            li {
+                & + li {
+                    margin-left: 28px;
+                }
+                a {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: $text-black;
+                    &:hover {
+                        color:$primary-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &_largespacing {
+            ul {
+                padding: 45px 0px;
+            }
+        }
+    }
+    &__lists {
+        margin-top: 58px;
+    }
+
+    &__social {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 154%;
+        color: $text-dark-gray;
+        h4 {
+            margin-bottom: 5px;
+        }
+        .page-footer__socials {
+            margin-top: 27px;
+        }
+    }
+
+
+    &__socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            & + li {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 50px;
+    }
+
+    &__copy {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: $text-dark-gray;
+        padding-top: 16px;
+        padding-bottom: 20px;
+    }
+
+    &__paymentslist {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            & + li {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.footer-description {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 171%;    
+    letter-spacing: 0.2px;    
+    color: $text-dark-gray;
+    &__logo {
+    }
+
+    &__text {
+        margin-left: -30px;
+    }
+}

@@ -1,0 +1,76 @@
+@mixin easeOut {
+    transition: all .3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@mixin boxShadow {
+    box-shadow: 0 2px 12px 0 rgba(35,25,25,0.13);
+}
+
+@mixin clearfix() {
+    *zoom: 1;
+    &:after,
+    &:before {
+        display: table;
+        clear: both;
+        content: "";
+        line-height: 0;
+    }
+}
+ 
+//these four properties will center a child element both horizontally and vertically inside, assuming the parent element has position: relative;
+//https://css-tricks.com/snippets/sass/centering-mixin/ 
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+
+
+@mixin checkbox-colors {
+  $colors: (
+    red: #ee204d,
+    shamrock: #45cea2  
+  );
+  @each $name, $color in $colors {
+    .bg-#{$name} {
+      background-color: $color;  
+    }
+  }
+}
+
+@mixin input-style {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $bg-gray;
+  border-radius: 8px;
+  border:0px;
+  outline: 0px;
+  width: 100%;
+  transition: 0.2s ease-in border-color;
+  border:1px solid transparent;
+  &:focus {
+    border-color:rgba($primary-color,.5);
+  }
+  &.input-error {
+      border-color:rgba($bg-red,.5);
+  }
+  &.input-success {
+      border-color:rgba($bg-green,.5);
+  }
+}

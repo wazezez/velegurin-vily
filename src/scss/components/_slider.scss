@@ -1,0 +1,57 @@
+.slider {
+    position: relative;
+    &__widget {
+        
+    }
+
+    &__nav {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: calc(100% + 40px);
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+    }
+
+    .slick-slide {
+        margin: 0 15px;
+    }
+
+    .slick-list {
+        margin: 0 -15px;
+    }
+}
+
+.slider-button {
+    border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border:0px;
+        cursor: pointer;
+        outline:0px;
+        transition: 0.3s ease all;
+        transition-property: background-color;
+        pointer-events: all;
+        svg {
+            path {
+                transition: 0.3s ease fill;
+            }
+        }
+        &:hover {
+            background-color: $primary-color;
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+}

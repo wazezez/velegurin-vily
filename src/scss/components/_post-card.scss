@@ -1,0 +1,50 @@
+.post-card {
+
+
+    &__poster {
+        
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    &__badges {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+    }
+
+    &__badge {
+    }
+
+    &__cover {
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+    }
+
+    &__content {
+        padding: 16px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 133%;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    &__actions {
+        margin-top: 45px;
+        .button {
+            width: 100%;
+        }
+    }
+}

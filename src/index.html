@@ -1,0 +1,327 @@
+<extends src="../layouts/app.html">
+  <!-- Page Content -->
+  <block name="content">
+    <!-- Fullpage Slider -->
+    <section class="slider-section" id="full-width-slider-section">
+      <div class="slider-section__nav">
+        <button class="slider-button js-slider-prev" data-slider="#hero-slider">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 12.5523 19.5523 13 19 13L7.83 13L12.7104 17.8804C13.1019 18.2719 13.1004 18.9074 12.7075 19.2975C12.3166 19.6857 11.6849 19.6849 11.2954 19.2954L4.70711 12.7071C4.31658 12.3166 4.31658 11.6834 4.70711 11.2929L11.2947 4.70531C11.6842 4.31578 12.3158 4.31578 12.7053 4.70531C13.0946 5.0946 13.0949 5.72568 12.7059 6.11531L7.83 11L19 11C19.5523 11 20 11.4477 20 12Z" fill="#333333"/>
+          </svg>                    
+        </button>
+        <button class="slider-button js-slider-next" data-slider="#hero-slider">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11L16.17 11L11.2896 6.11961C10.8981 5.72811 10.8996 5.09262 11.2925 4.70251C11.6834 4.31434 12.3151 4.31506 12.7046 4.70461L19.2929 11.2929C19.6834 11.6834 19.6834 12.3166 19.2929 12.7071L12.7053 19.2947C12.3158 19.6842 11.6842 19.6842 11.2947 19.2947C10.9054 18.9054 10.9051 18.2743 11.2941 17.8847L16.17 13L5 13C4.44771 13 4 12.5523 4 12Z" fill="#333333"/>
+          </svg>
+      </div>
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slider__item">
+          <div class="promo-card" style="background-image: url('/assets/images/banner-1.jpg');">
+            <div class="promo-card__content">
+              <div class="promo-card__title">Интернет-магазин ковров с быстрой и бесплатной доставкой по России</div>
+              <div class="promo-card__description">Более 10 000 дизайнов ковров из Турции, <br>Бельгии, России и других стран</div>
+              <div class="promo-card__action">
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+            <!-- /.promo-card__content -->
+          </div>
+          <!-- /.promo-card -->
+        </div>
+        <!-- /.hero-slider__item -->
+        <div class="hero-slider__item">
+          <div class="promo-card promo-card_white" style="background-image: url('/assets/images/installment.jpg');">
+            <div class="promo-card__content">
+              <div class="promo-card__title">Возможность покупки в кредит или рассрочку</div>
+              <div class="promo-card__description">Возможна покупка в кредит—онлайн по низкой<br> процентной ставке. Одобрение кредита от 2-х<br> минут не выходя из дома.</div>
+              <div class="promo-card__action">
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+            <!-- /.promo-card__content -->
+          </div>
+          <!-- /.promo-card -->
+        </div>
+        <!-- /.hero-slider__item -->
+        <div class="hero-slider__item">
+          <div class="promo-card promo-card_white" style="background-image: url('/assets/images/purchase.jpg');">
+            <div class="promo-card__content">
+              <div class="promo-card__title">Возврат ковра или денежных средств в течение 15 дней
+                после покупки</div>
+              <div class="promo-card__description">Если ковёр не понравился или не подошел, заменим на любой другой или вернём деньги без лишних вопросов.</div>
+              <div class="promo-card__action">
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+            <!-- /.promo-card__content -->
+          </div>
+          <!-- /.promo-card -->
+        </div>
+        <!-- /.hero-slider__item -->
+        <div class="hero-slider__item">
+          <div class="promo-card" style="background-image: url('/assets/images/virtual-fitting.jpg');">
+            <div class="promo-card__content">
+              <div class="promo-card__title">Виртуальная примерка ковра в вашу комнату за 1 минуту.</div>
+              <div class="promo-card__description">Загрузите фотографию вашей комнатыи примерьте любой ковер прямо сейчас</div>
+              <div class="promo-card__action">
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+            <!-- /.promo-card__content -->
+          </div>
+          <!-- /.promo-card -->
+        </div>
+        <!-- /.hero-slider__item -->
+        <div class="hero-slider__item">
+          <div class="promo-card" style="background-image: url('/assets/images/sale.jpg');">
+            <div class="promo-card__content">
+              <div class="promo-card__title">Ковры с большими скидками до 50% от стоимости</div>
+              <div class="promo-card__description">Если ковёр не понравился или не подошел, заменим на любой другой или вернём деньгибез лишних вопросов.</div>
+              <div class="promo-card__action">
+                <a href="" class="button">Подробнее</a>
+              </div>
+            </div>
+            <!-- /.promo-card__content -->
+          </div>
+          <!-- /.promo-card -->
+        </div>
+        <!-- /.hero-slider__item -->
+      </div>
+    </section>
+    <!-- /Fullpage Slider -->
+
+    <!-- Page Content -->
+    <section class="page-content" id="page-index">
+      <div class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="content-section__title">
+                <h2>Лучшие ковры для вас</h2>
+              </div>
+              <div class="content-section__description">Вили.ру – это независимый тематический Интернет-ресурс, созданный московскими экспертами в коврах и декораторами интерьеров. Наша задача – как можно больше рассказать о ковре и его роли в интерьере.</div>
+              <div class="content-section__entries">
+                <div class="row">
+                  <div class="col-xl-4 col-md-6">
+                    <include src="..//partials/product-card.html"></include>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <include src="..//partials/product-card.html"></include>
+                  </div>
+                  <div class="col-xl-4 col-md-6">
+                    <include src="..//partials/product-card.html"></include>
+                  </div>
+                </div>
+              </div>
+              <!-- /.content-section__entries -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content-section -->
+      <div class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="content-section__entries">
+                <div class="row">
+                  <div class="col-xl-4">
+                    <include src="..//partials/post-card.html">
+                      {
+                          "post_url" : "/assets/images/page-poster.jpg",
+                          "title": "Рассрочка от 0%",
+                          "description": "Вы можете получить безпроцентную рассрочку под 0% в зависимости от того, какой товар вы приобритете",
+                          "button_text": "Узнать подробнее",
+                          "label" : [
+                            "class" : "badge_primary",
+                            "title" : "рассрочка"
+                          ]
+                      }
+                    </include>
+                  </div>
+                  <div class="col-xl-4">
+                    <include src="..//partials/post-card.html">
+                      {
+                          "post_url" : "/assets/images/sale-poster.jpg",
+                          "title": "Ковры со скидками",
+                          "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                          "button_text": "Узнать подробнее",
+                          "label" : [
+                            "class" : "badge_red",
+                            "title" : "скидки"
+                          ]
+                      }
+                    </include>
+                  </div>
+                  <div class="col-xl-4">
+                    <include src="..//partials/post-card.html">
+                      {
+                          "post_url" : "/assets/images/delivery.jpg",
+                          "title": "Ковры со скидками",
+                          "description": "Доставим ваш ковёр бесплатно до квартиры, если сумма вашего заказа превышает <span class='text-primary'>5 000 ₽</span>.",
+                          "button_text": "Узнать подробнее",
+                          "label" : [
+                            "class" : "badge_green",
+                            "title" : "доставка"
+                          ]
+                      }
+                    </include>
+                  </div>
+                </div>
+              </div>
+              <!-- /.content-section__entries -->
+              <div class="content-section__action">
+                <a href="" class="button button_lightgray" title="Посмотреть все спецпредложения">Посмотреть все спецпредложения</a>
+              </div>
+              <!-- /.content-section__action -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content-section -->
+      <div class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="content-section__entries">
+                <div class="row">
+                  <div class="col-xl-4">
+                    <include src="..//partials/product-card.html"></include>
+                  </div>
+                </div>
+              </div>
+              <!-- /.content-section__entries -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content-section -->
+      <div class="content-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="content-section__entries">
+                <div class="row">
+                  <div class="col-xl-4">
+                    <div class="post-card">
+                      <div class="post-card__poster">
+                        <div class="post-card__cover">
+                          <picture>
+                            <img  srcset="/assets/images/poster-russia@2x.jpg"
+                                  src="/assets/images/poster-russia.jpg" alt="Россия">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="post-card__content">
+                        <div class="post-card__title">Российсие ковры</div>
+                        <div class="post-card__description">
+                          Качественные и недорогие ковры 
+                          отечественного производства, любой ценовой категории и размера
+                        </div>
+                        <div class="post-card__actions">
+                          <a href="" class="button button_lightgray">Узнать подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.post-card -->
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="post-card">
+                      <div class="post-card__poster">
+                        <div class="post-card__cover">
+                          <picture>
+                            <img  srcset="/assets/images/poster-turkey@2x.jpg"
+                                  src="/assets/images/poster-turkey.jpg" alt="Турция">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="post-card__content">
+                        <div class="post-card__title">Ковры со скидками</div>
+                        <div class="post-card__description">
+                          Качественные и недорогие ковры Турецкого производства, любой ценовой категории и размера
+                        </div>
+                        <div class="post-card__actions">
+                          <a href="" class="button button_lightgray">Узнать подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.post-card -->
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="post-card">
+                      <div class="post-card__poster">
+                        <div class="post-card__cover">
+                          <picture>
+                            <img  srcset="/assets/images/poster-belgium@2x.jpg"
+                                  src="/assets/images/poster-belgium.jpg" alt="Бельгия">
+                          </picture>
+                        </div>
+                      </div>
+                      <div class="post-card__content">
+                        <div class="post-card__title">Бельгийские ковры</div>
+                        <div class="post-card__description">
+                          Качественные и недорогие ковры Бельгийского производства, любой ценовой категории и размера
+                        </div>
+                        <div class="post-card__actions">
+                          <a href="" class="button button_lightgray">Узнать подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.post-card -->
+                  </div>
+                </div>
+              </div>
+              <!-- /.content-section__entries -->
+              <div class="content-section__action">
+                <a href="" class="button button_lightgray" title="Посмотреть всех производителей">Посмотреть всех производителей</a>
+              </div>
+              <!-- /.content-section__action -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.content-section -->
+
+      <include src="../partials/company-news.html"></include>
+      
+      <include src="../partials/design-selection.html"></include>
+
+      <include src="../partials/faq-accordion.html"></include>
+    </section>
+    <!-- /Page Content -->
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="subscribe-widget">
+              <div class="subscribe-widget__content">
+                <div class="subscribe-widget__title">
+                  Подписаться на рассылку
+                </div>
+                <!-- /.subscribe-widget__title -->
+                <div class="subscribe-widget__description">
+                  Подпишитесь на нашу рассылку и получайте одним из первых информацию о распродажах,акциях, скидках и новинках ковров.
+                </div>
+                <!-- /.subscribe-widget__description -->
+                <form action="" class="subscribe-widget__form">
+                  <input type="text" placeholder="Введите ваш email-адрес">
+                  <button type="submit" class="button button_text-large">Подписаться</button>
+                </form>
+                <!-- /.subscribe-widget__form -->
+              </div>
+              <!-- /.subscribe-widget__content -->
+              <div class="subscribe-widget__poster">
+                <img src="/assets/images/at-symbol.png" alt="Собака">
+              </div>
+              <!-- /.subscribe-widget__poster -->
+            </div>
+            <!-- /.subscribe-widget -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Subscribe Section -->
+  </block>
+</extends>

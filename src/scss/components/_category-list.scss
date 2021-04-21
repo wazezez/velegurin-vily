@@ -1,0 +1,34 @@
+.category-list {
+    h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 20px;
+        color: $text-black;
+        margin-bottom: 13px;
+    }
+    & + & {
+        margin-top: 58px;
+    }
+    &__menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            & + li {
+                margin-top: 4px;
+            }
+            a {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 20px;
+                color: $text-black;
+                &:hover {
+                    color:$primary-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

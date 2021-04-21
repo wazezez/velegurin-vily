@@ -1,0 +1,85 @@
+.checkbox-color {
+    label {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        transition: 0.3s ease-in-out box-shadow;
+        span {
+            height: 100%;
+            width: 100%;
+            background-color: $bg-gray;
+            border-radius: 50%;
+        }
+        @include checkbox-colors;
+    }
+    input[type=checkbox] {
+        width: 1px;
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        &:checked {
+            & + label {
+                color:$primary-color;
+                box-shadow: 0 0 0 3px rgba($primary-color,.35);
+            }
+        }
+    }
+}
+
+.checkbox {
+    position: relative;
+    label {
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.4;
+        padding-left: 28px;
+        display: block;
+        &:before,
+        &:after {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 4px;
+            left: 0px;
+            content: '';
+            // border-radius: 50%;
+            border-radius: 3px;
+        }
+        &:before {
+            border:2px solid #E2E2E2;
+            transition: 0.3s ease-in-out border-color;
+        }
+        &:after {
+            background: url(../images/svg/icons/filter-checkbox-tick.svg) 50% 50% no-repeat;
+            opacity: 0;
+            transition: 0.3s ease-in-out opacity;
+        }
+        a {
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    input[type=checkbox] {
+        width: 1px;
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+        &:checked {
+            & + label {
+                &:before {
+                    border-color: $primary-color;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

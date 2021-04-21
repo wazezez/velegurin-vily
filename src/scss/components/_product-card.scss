@@ -1,0 +1,165 @@
+.product-card {
+	$padding:16px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	// .product-card__picture
+	&:hover {
+		.product-card__quickview {
+			opacity: 1;
+			pointer-events: all;
+			.button {
+				transform: translateY(0px);
+			}
+		}
+	}
+	&__picture {
+		// background-color: $bg-gray;
+		border-radius: 12px;
+		padding: 16px;
+		text-align: center;
+		display: block;
+		position: relative;
+		img {
+			max-width: 100%;
+		}
+		
+	}
+
+	// .product-card__badges
+
+	&__badges {		
+		display: flex;
+		flex-direction: row;
+		margin: 0px -4px;
+		margin-bottom: 13px;
+		.product-card__badge {
+			& + & {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	// .product-card__badge
+
+	&__badge {
+		margin: 0px 4px;
+	}
+
+	// .product-card__content
+
+	&__content {
+		padding: $padding;
+		color:$text-black;
+		display: block;
+	}
+
+	// .product-card__title
+
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 28px;				
+	}
+
+	// .product-card__description
+
+	&__description {
+		font-weight: 500;		
+		line-height: 28px;		
+	}
+
+	// .product-card__price
+
+	&__price {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 133%;		
+		letter-spacing: 0.1px;	
+		margin-top: 11px;	
+	}
+
+	// .product-card__discount
+
+	&__discount {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 5px;
+		flex-wrap: wrap;
+	}
+
+	// .product-card__oldprice
+
+	&__oldprice {
+		font-weight: bold;		
+		line-height: 20px;
+		letter-spacing: 0.1px;
+		text-decoration-line: line-through;
+	}
+
+	// .product-card__discountvalue
+
+	&__discountvalue {
+		font-style: normal;
+		font-weight: 500;		
+		line-height: 20px;
+		letter-spacing: 0.1px;	
+		color: $text-orange;
+		position: relative;
+		margin-left: 5px;
+		&:before {
+			content:'•';
+			margin-right: 5px;
+		}
+	}
+
+	// .product-card__actions
+
+	&__actions {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 16px;
+		padding: 0px $padding;
+		.button_addtocart {
+			flex-grow: 1;
+			padding: 0px 10px;
+		}
+		.button {
+			height: 46px;
+			& + .button {
+				margin-left: 15px;
+			}
+			&_like {
+				width: 46px;
+			}
+		}
+	}
+	&__quickview {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content:center;
+		pointer-events: none;
+		opacity: 0;
+		transition: 0.3s ease-in-out opacity;
+		.button {
+			$color: $primary-color;
+			background: rgba($color,.1);
+			border:1px solid $color;
+			color:$color;
+			height: 50px;
+			transform: translateY(10px);
+			transition: 0.2s ease transform;
+			&:hover {
+				background: rgba($color,.15);
+				color:$color;
+			}
+		}
+	}
+}

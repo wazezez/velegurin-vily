@@ -1,0 +1,27 @@
+.certificate-checkbox {
+    position: relative;
+    input {
+        &[type=radio],
+        &[type=checkbox] {
+            width: 1px;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:checked  {
+            & + label {
+                box-shadow: 0 0 0 3px rgba($primary-color,.8);
+                opacity: 1;
+            }
+        }
+    }
+    label {
+        cursor: pointer;
+        border-radius: 12px;
+        display: block;
+        opacity: .8;
+        transition: 0.2s ease-in box-shadow;
+    }
+}

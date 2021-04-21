@@ -1,0 +1,34 @@
+.breadcrumbs {
+    padding: 21px 0px;
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style:none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        li {
+            a {
+                font-weight: bold;
+                font-size: 11px;
+                line-height: 14px;
+                color:$text-black;
+                &.current {
+                    color:$primary-color;
+                }
+            }
+            & + li {
+                &:before {
+                    background: url(../images/svg/icons/breadcrumbs-separator.svg) 50% 50% no-repeat;
+                    width: 8px;
+                    height: 8px;
+                    content:'';
+                    margin-left: 8px;
+                    margin-right: 6px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
