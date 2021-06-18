@@ -33,30 +33,63 @@
                 <div class="container">
                     <!-- Product: main info -->
                     <div class="row">
-                        <div class="col-xl-9">
+                        <div class="col-xl-8 col-md-7">
                             <div class="product__preview">
                                 <div class="product__poster">
                                     <div class="product__badges">
-                                        <div class="product-badge badge badge_green">новинка</div>
-                                        <div class="product-badge badge badge_red">распродажа</div>
-                                        <div class="product-badge badge badge_red">25%</div>
+                                        <div class="product__badge badge badge_green">новинка</div>
+                                        <div class="product__badge badge badge_red">распродажа</div>
+                                        <div class="product__badge badge badge_red">25%</div>
                                     </div>
                                     <!-- /.product__badges -->
-                                    <div class="product__slider">
-    
+                                    <div class="product__slider product-slider js-fullproduct-slider" id="product-slider">
+                                        <div class="product-slider__item">
+                                            <div class="js-zoom-image" style="display:inline-block"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        </div>
+                                        <div class="product-slider__item">
+                                            <div class="js-zoom-image" style="display:inline-block"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        </div>
+                                        <div class="product-slider__item">
+                                            <div class="js-zoom-image" style="display:inline-block"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        </div>
                                     </div>
                                     <!-- /.product__slider -->
+                                    <div class="slider__nav">
+                                        <button class="slider-button js-slider-prev" data-slider="#product-slider">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 12.5523 19.5523 13 19 13L7.83 13L12.7104 17.8804C13.1019 18.2719 13.1004 18.9074 12.7075 19.2975C12.3166 19.6857 11.6849 19.6849 11.2954 19.2954L4.70711 12.7071C4.31658 12.3166 4.31658 11.6834 4.70711 11.2929L11.2947 4.70531C11.6842 4.31578 12.3158 4.31578 12.7053 4.70531C13.0946 5.0946 13.0949 5.72568 12.7059 6.11531L7.83 11L19 11C19.5523 11 20 11.4477 20 12Z" fill="#333333"/>
+                                          </svg>                    
+                                        </button>
+                                        <button class="slider-button js-slider-next" data-slider="#product-slider">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11L16.17 11L11.2896 6.11961C10.8981 5.72811 10.8996 5.09262 11.2925 4.70251C11.6834 4.31434 12.3151 4.31506 12.7046 4.70461L19.2929 11.2929C19.6834 11.6834 19.6834 12.3166 19.2929 12.7071L12.7053 19.2947C12.3158 19.6842 11.6842 19.6842 11.2947 19.2947C10.9054 18.9054 10.9051 18.2743 11.2941 17.8847L16.17 13L5 13C4.44771 13 4 12.5523 4 12Z" fill="#333333"/>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                      <!-- /.slider__nav -->
                                 </div>
-                                <div class="product__thumbnails">
-
+                                <div class="product__thumbnails product-thumbnails js-product-thumbnails" data-slider="#product-slider">
+                                    <a href="#" data-index="1" class="product-thumbnails__item">
+                                        <div class="product-thumbnails__picture"><img src="/assets/images/thumbnail-1.jpg" alt="Thumbnail"></div>
+                                    </a>
+                                    <a href="#" data-index="2" class="product-thumbnails__item">
+                                        <div class="product-thumbnails__picture"><img src="/assets/images/thumbnail-2.jpg" alt="Thumbnail"></div>
+                                    </a>
+                                    <a href="#" data-index="3" class="product-thumbnails__item">
+                                        <div class="product-thumbnails__video">                                            
+                                            <img src="/assets/images/thumbnail-3.jpg" alt="Thumbnail">
+                                        </div>
+                                    </a>
                                 </div>
                                 <!-- /.product__thumbnails -->
-                                <a href="" class="button button_gradient_green">Примерить этот ковёр онлайн</a>
+                                <div class="product__promoaction">
+                                    <a href="" class="button button_gradient_green w-100 ">Примерить этот ковёр онлайн</a>
+                                </div>
                             </div>
                             <!-- /.product__previews -->
                         </div>
-                        <div class="col-xl-3">
-                            <div class="product__info">
+                        <div class="col-xl-4 col-md-5">
+                            <div class="product__info" id="product-info">
                                 <div class="product__badges">
                                     <div class="product-badge badge badge_gradient_green">товар в наличии на складе</div>
                                 </div>
@@ -72,11 +105,17 @@
                                                 Выберите размер
                                             </div>
                                             <div class="product-filter__option">
-                                                <select name="size">
+                                                <select name="size" class="select-grid-style">
                                                     <option data-display="Размер">Размер</option>
                                                     <option value="1х1">1х1</option>
                                                     <option value="1х2">1х2</option>
                                                     <option value="1х3">1х3</option>
+                                                    <option value="2х1">2х1</option>
+                                                    <option value="2х2">2х2</option>
+                                                    <option value="2х3">2х3</option>
+                                                    <option value="3х1">3х1</option>
+                                                    <option value="3х2">3х2</option>
+                                                    <option value="3х3">3х3</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -85,8 +124,14 @@
                                                 Укажите количество
                                             </div>
                                             <div class="product-filter__option">
-                                                <div class="input-counter">
-                                                    <input type="number" name="product_count" value="1">
+                                                <div class="input-counter js-input-counter">
+                                                    <button data-action="remove" type="button" role="button">
+                                                        <img src="/assets/images/svg/icons/minus.svg" alt="Минус">
+                                                    </button>
+                                                    <input type="number" name="product_count" value="1" min="1">
+                                                    <button data-action="add" type="button" role="button">
+                                                        <img src="/assets/images/svg/icons/plus.svg" alt="Плюс">
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -103,11 +148,14 @@
                                     </div>
 
                                     <div class="product__actions">
-                                        <button class="button button_addtocart" title="Добавит в корзину">Добавить в корзину</button>
-                                        <button class="button button_like" title="Добавить в избранное">
-                                            <img src="/assets/images/svg/icons/heart.svg" alt="Добавить в избранное">
+                                        <button class="button button_addtocart" title="Добавит в корзину">
+                                            <span class="d-none d-lg-block">Добавить в корзину</span>
+                                            <span class="d-block d-lg-none">В корзину</span>
                                         </button>
-                                        <button class="button button_gradient_green product__buyonetap">
+                                        <button class="button button_like" title="Добавить в избранное">
+                                            <img src="/assets/images/svg/icons/heart_.svg" alt="Добавить в избранное" class="svg">
+                                        </button>
+                                        <button class="button button_gradient_green product__buyonetap" data-toggle="modal" data-target="#oneTapModal" type="button">
                                             Купить в 1 клик
                                         </button>
                                     </div>
@@ -123,7 +171,7 @@
 
                     <!-- Product: Tabs -->
                     <div class="row">
-                        <div class="col-xl-9">
+                        <div class="col-xl-8">
                             <div class="product-tabs tabs">
                                 <!-- Product Tabs -->
                                 <ul class="nav nav-pills tabs-nav" id="product-tab" role="tablist">
@@ -158,6 +206,7 @@
                                             </div>
                                             <!-- /.product-description__row -->
                                             <div class="product-description__row">
+                                                <h2>Основные характеристики</h2>
                                                 <div class="table-block">
                                                     <div class="table-block__title">Характеристики</div>
                                                     <table class="table-block__table">
@@ -224,80 +273,13 @@
                                                         </tr>
                                                         
                                                     </table>
-                                                </div>
-                                                <div class="product-description__notify">
-                                                    Информация о технических характеристиках, комплекте поставки, стране изготовления, внешнем виде и цвете товара носит справочный характер и основывается на последних доступных к моменту публикации сведениях
-                                                </div>
+                                                </div>                               
                                             </div>
                                             <!-- /.product-description__row -->
                                         </div>
-                                        <h2>Основные характеристики</h2>
-                                        <div class="table-block">
-                                            <div class="table-block__title">Характеристики</div>
-                                            <table class="table-block__table">
-                                                <tr>
-                                                    <td>Cтрана производитель:</td>
-                                                    <td>Турция</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Способ производства:</td>
-                                                    <td>Ручная работа</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Материал: </td>
-                                                    <td>Шерсть 80%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Высота: </td>
-                                                    <td>7 мм</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Плотность:</td>
-                                                    <td>593154</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Форма:</td>
-                                                    <td>254</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Узор:</td>
-                                                    <td>3</td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <div class="table-block">
-                                            <div class="table-block__title">Стиль и особенности</div>
-                                            <table class="table-block__table">
-                                                <tr>
-                                                    <td>Cтиль:</td>
-                                                    <td>Современный</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Коллекция:</td>
-                                                    <td>UVENUTI</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Наименование: </td>
-                                                    <td>LRB1532-ASHWOOD-SKYLINE-BLUE </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Артикул:</td>
-                                                    <td>7 мм</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Плотность:</td>
-                                                    <td>593154</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Количество цветов:</td>
-                                                    <td>254</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Количество фактур:</td>
-                                                    <td>3</td>
-                                                </tr>
-                                                
-                                            </table>
+
+                                        <div class="product-description__notify text-primary">
+                                            Информация о технических характеристиках, комплекте поставки, стране изготовления, внешнем виде и цвете товара носит справочный характер и основывается на последних доступных к моменту публикации сведениях
                                         </div>
                                     </div>
                                     <!-- /Description Tab -->
@@ -328,7 +310,47 @@
                 </div>
             </div>
             <!-- /.product -->
+            <include src="../partials/recommendation-products.html"></include>
+
+            <include src="../partials/watched.html"></include>
+            <include src="../partials/faq-accordion.html"></include>
         </section>
         <!-- /Page Content -->
+
+        <!-- Page Action -->
+        <section class="page-action js-page-action" id="page-action" data-show-after="#product-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-action__inner">
+                            <div class="product-cart-widget">
+                                <div class="product-cart-widget__product">
+                                    <div class="product-cart-widget__poster">
+                                        <img src="/assets/images/carpet-product.jpg" alt="">
+                                    </div>
+                                    <div class="product-cart-widget__productinfo">
+                                        <div class="product-cart-widget__title">
+                                            Индийский ковёршерстяной Carrata, Каррата
+                                        </div>
+                                        <div class="product-cart-widget__price">206 484 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="product-cart-widget__action">                                    
+                                    <button class="button js-scroll-to" title="Добавить в корзину" data-scroll-to="#product-info">
+                                        <span class="d-none d-lg-block">Добавить в корзину</span>
+                                        <span class="d-block d-lg-none">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2.055 3.50009C1.7396 3.49563 1.44622 3.66142 1.28722 3.93398C1.12822 4.20654 1.12822 4.54364 1.28722 4.8162C1.44622 5.08876 1.7396 5.25455 2.055 5.25009H3.66181C4.08623 5.25009 4.44002 5.54346 4.52044 5.96103L4.69467 6.87249L6.57478 16.7516C6.91477 18.5339 8.48438 19.8334 10.2986 19.8334H21.2148C23.029 19.8334 24.5993 18.5344 24.9386 16.7516L26.8187 6.87249C26.8675 6.61639 26.7997 6.35185 26.6336 6.15092C26.4676 5.94998 26.2206 5.83358 25.9601 5.83342H6.27642L6.23884 5.63404C6.0038 4.40165 4.91601 3.50009 3.66181 3.50009L2.055 3.50009ZM6.61008 7.58342H24.9033L23.2202 16.4246C23.0359 17.3927 22.2004 18.0834 21.2148 18.0834H10.2986C9.31328 18.0834 8.47834 17.3926 8.29318 16.4246V16.4234L6.61008 7.58342ZM11.6753 21.0001C10.7093 21.0001 9.92618 21.7836 9.92618 22.7501C9.92618 23.7166 10.7093 24.5001 11.6753 24.5001C12.6414 24.5001 13.4245 23.7166 13.4245 22.7501C13.4245 21.7836 12.6414 21.0001 11.6753 21.0001ZM19.838 21.0001C18.872 21.0001 18.0889 21.7836 18.0889 22.7501C18.0889 23.7166 18.872 24.5001 19.838 24.5001C20.8041 24.5001 21.5872 23.7166 21.5872 22.7501C21.5872 21.7836 20.8041 21.0001 19.838 21.0001Z" fill="white"/>
+                                            </svg>                                                
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Page Action -->
     </block>    
 </extends>

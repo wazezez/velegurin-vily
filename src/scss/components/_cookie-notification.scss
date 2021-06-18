@@ -1,0 +1,60 @@
+.cookie-notification {
+    border-radius: 5px;
+    position: fixed;
+    width: 600px;
+    max-width: calc(100% - 30px);
+    transform: translateY(120%);
+    background-color: #ececec;
+    padding: 15px 25px;
+    right: 15px;
+    bottom: 15px;
+    pointer-events: none;
+    z-index: 101;
+    @include media-breakpoint-down(sm) {
+        padding: 15px;
+        left:50%;
+        transform: translate(-50%,120%);
+        right: auto;
+    }
+    &__message {
+        color:#000;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+        }
+    }
+    button {
+        padding: 0px 15px;
+        border:0px;
+        text-align: center;
+        border:0px;
+        line-height: 40px;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 16px;
+        outline:0px;
+        box-shadow: 0px;
+        transition: 0.3s ease-in all;
+        background-color: $primary-color;
+        color:#fff;
+        transition-property: color,background-color;
+        &:hover {
+            background-color: rgba($primary-color,80%);
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            margin-left: 15px;
+        }
+    }
+    &_visible {
+        transition: 0.3s ease transform;
+        transform: translateY(0px);
+        pointer-events: all;
+        @include media-breakpoint-down(sm) {
+            transform: translate(-50%, -15px);
+        }
+    }
+}

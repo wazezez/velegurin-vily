@@ -14,12 +14,17 @@
         width: 100%;
         border-bottom: 1px solid transparent;
         transition: 0.1s ease-in-out border-color;
+        @include media-breakpoint-down(md) {
+            text-align: left;
+            font-size: 15px;
+        }
         &:focus {
             outline: 0px;
         }
         img {
             transform: rotate(180deg);
             transition: 0.2s ease-in transform;
+            margin-right: -2px;
         }
         &:not(.collapsed) {
             color:$primary-color;
@@ -59,6 +64,9 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 20px;
+            @include media-breakpoint-down(md) {
+                padding: 10px 0px;
+            }
             &:before,
             &:after {
                 width: 22px;

@@ -11,8 +11,12 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.3.0",
+		"copy-to-clipboard": "^3.3.1",
 		"jquery": "^3.3.1",
 		"jquery-nice-select": "^1.1.0",
+		"jquery-zoom": "^1.7.21",
+		"js-cookie": "^2.2.1",
+		"js-image-zoom": "^0.7.0",
 		"popper.js": "^1.14.4",
 		"slick-carousel": "^1.8.1"
 	},

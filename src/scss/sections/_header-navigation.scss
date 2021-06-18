@@ -1,0 +1,13 @@
+.header-navigation {
+    position: sticky;
+    top: 0px;
+    background: linear-gradient(90.44deg, #7F10AD 26.83%, #540F9E 72.99%);
+    padding-bottom: 20px;
+    z-index: 99;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+    .page-header__footer {
+        margin-top: 0%;
+    }
+}

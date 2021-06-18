@@ -4,9 +4,25 @@
         font-size: 32px;
         line-height: 40px;
         margin-bottom: 24px;
+        @include media-breakpoint-down(lg) {
+			font-size: 28px;
+		}	
+        @include media-breakpoint-down(md) {
+            font-size: 26px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 18px !important;
+        }
     }
     &__table {
+        width: 100%;
         tr {
+            // @include media-breakpoint-down(xs) {
+            //     display: flex;
+            //     flex-direction: column;
+            // }
             td {
                 font-weight: 500;
                 font-size: 16px;
@@ -14,12 +30,23 @@
                 color:$text-black;
                 width: 50%;
                 padding: 8px 8px;
+                @include media-breakpoint-down(xs) {
+                    padding: 7px 0px;
+                    // width: 100%;
+                    font-size: 14px;
+                }
                 &:first-of-type {
                     color:$text-dark-gray;
                     padding-left: 0px;
+                    @include media-breakpoint-down(xs) {
+                        padding-bottom: 0px;
+                    }
                 }
-                &:last-of-type {
+                &:last-of-type {                    
                     padding-right: 0px;
+                    @include media-breakpoint-down(xs) {
+                        padding-top: 8px;
+                    }
                 }
             }
         }

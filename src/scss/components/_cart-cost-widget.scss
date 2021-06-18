@@ -1,0 +1,21 @@
+
+.cart-cost-widget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // .cart-cost-widget__title
+
+    &__title {
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: 1.4;
+        padding-right: 15px;
+    }
+
+    // .cart-cost-widget__action
+
+    &__action {
+
+    }
+}
+

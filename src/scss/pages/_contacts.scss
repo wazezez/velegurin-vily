@@ -1,5 +1,16 @@
 .page-contacts {
     .question-form {
         margin-top: 80px;
+        @include media-breakpoint-down(lg) {
+            margin-top: 50px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-top: 40px;
+        }
+    }
+    .table-block {
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 20px;
+        }
     }
 }

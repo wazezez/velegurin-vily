@@ -1,14 +1,20 @@
 .catalog {
+    &__sidebar {
 
+    }
     &__filters {
-        background-color: #FFFFFF;
-        box-shadow: 0px 101px 130px rgba(0, 0, 0, 0.02), 0px 50.5493px 65.0635px rgba(0, 0, 0, 0.0152067), 0px 30.4485px 39.1912px rgba(0, 0, 0, 0.0130318), 0px 19.513px 25.1158px rgba(0, 0, 0, 0.0114179), 0px 12.6468px 16.278px rgba(0, 0, 0, 0.01), 0px 7.961px 10.2468px rgba(0, 0, 0, 0.0085821), 0px 4.57409px 5.88744px rgba(0, 0, 0, 0.00696822), 0px 2.01317px 2.59121px rgba(0, 0, 0, 0.00479335);
     }
     &__filter {
 
     }
     &__filtersaction {
         padding: 16px;
+        button {
+            width: 100%;
+            & + button {
+                margin-top: 8px;
+            }
+        }
     }
     &__products {
         // .product-card {
@@ -27,6 +33,32 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background-color: #fff;
+        @include media-breakpoint-down(md) {
+            z-index: 98;
+            position: sticky;
+            top: 0px;
+            padding: 15px 0px;
+        }
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: inherit;
+            justify-content: inherit;
+        }
+        .button {
+            display: none;
+            @include media-breakpoint-down(md) {
+                height: 46px;
+                margin-right: 10px;
+                display: inline-flex;
+                font-size: 14px;
+            }    
+        }
+        .nice-select {
+            @include media-breakpoint-down(md) {
+                min-width: 150px;
+            }
+        }
     }
     &__load {
         display: flex;
@@ -41,5 +73,27 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 20px;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+    &__selectedfilters {
+        margin-bottom: 18px;
+    }
+    &__postcount {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333333;
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        span {
+            color:$primary-color;
+            font-weight: bold;
+        }
     }
 }

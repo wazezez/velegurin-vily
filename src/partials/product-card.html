@@ -1,10 +1,13 @@
 <div class="product-card">
-    <a href="" class="product-card__inner">
+    <a href="product.html" class="product-card__inner">
       <div class="product-card__picture">
+        <button class="button button_like" title="Добавить в избранное">
+          <img src="/assets/images/svg/icons/heart_.svg" alt="Добавить в избранное" class="svg">
+        </button>
         <img src="/assets/images/product.png" alt="Фото продукта">
         <!-- Product Card Quick View -->
-        <div class="product-card__quickview" data-toggle="modal" data-target="#product-12-quick-view">
-          <div class="button">Быстрый просмотр</div>
+        <div class="product-card__quickview">
+          <div class="button js-show-product-preview" data-toggle="modal" data-target="#productQuickView">Быстрый просмотр</div>
         </div>
         <!-- /Product Card Quick View -->
       </div>                     
@@ -13,7 +16,7 @@
           <div class="product-card__badge badge badge_green">Новинка</div>
           <div class="product-card__badge badge badge_red">Распродажа</div>
         </div>
-        <div class="product-card__title">Carrata, Каррата</div>
+        <div class="product-card__title">Ковер Caratta</div>
         <div class="product-card__description">Ковер, короткий ворс, 0,8x0,4 м</div>
         <div class="product-card__price">171 484 ₽</div>
         <div class="product-card__discount">
@@ -22,10 +25,48 @@
         </div>
       </div>
     </a>
+    <div class="product-card__sizewrapper">
+      <button class="js-show-product-sizes" aria-toggle="false">Размеры</button>
+      <div class="product-card__sizes">
+        <div class="product-card__size">200x100 <span>11 000 ₽</span></div>
+        <div class="product-card__size">200x200 <span>12 000 ₽</span></div>        
+      </div>
+    </div>
     <div class="product-card__actions">
-      <button class="button button_addtocart" title="Добавит в корзину">Добавить в корзину</button>
+      <button class="button button_addtocart js-show-product-popup" title="Добавит в корзину">
+        <span class="d-none d-lg-block">Добавить в корзину</span>
+        <span class="d-block d-lg-none">В корзину</span>
+        <!-- Product Popup -->
+        <div class="product-card__popup">
+          <div class="product-size-widget">
+            <div class="product-size-widget__row">
+              <div class="product-size-widget__checkbox checkbox">
+                <input type="checkbox" value="" id="psw_1">
+                <label for="psw_1">
+                  200x100
+                  <span>11 000 ₽</span>
+                </label>
+              </div>
+            </div>
+            <div class="product-size-widget__row">
+              <div class="product-size-widget__checkbox  checkbox">
+                <input type="checkbox" value="" id="psw_2">
+                <label for="psw_2">
+                  200x200
+                  <span>12 000 ₽</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="button button_addtocart">
+            <span class="d-none d-lg-block">Добавить в корзину</span>
+            <span class="d-block d-lg-none">В корзину</span>
+          </div>
+        </div>
+        <!-- /Product Popup -->
+      </button>
       <button class="button button_like" title="Добавить в избранное">
-        <img src="/assets/images/svg/icons/heart.svg" alt="Добавить в избранное">
+        <img src="/assets/images/svg/icons/heart_.svg" alt="Добавить в избранное" class="svg">
       </button>
     </div>
 </div>

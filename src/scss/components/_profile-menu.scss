@@ -7,6 +7,7 @@
     padding: 0;
     list-style:none;
     li {
+        position: relative;
         & + li {
             margin-left: 15px;
         }
@@ -22,6 +23,10 @@
         text-align: center;
         color: #FFFFFF;
         height: 48px;
+        @include media-breakpoint-down(sm) {
+            font-size: 10px;
+            height: auto;
+        }
         &:hover {
             .profile-menu__icon {
                 transform: translateY(-5px);
@@ -35,6 +40,14 @@
         margin-bottom: 7px;
         position: relative;
         transition: 0.1s ease-in-out transform;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 0px;
+        }
+        img {
+            @include media-breakpoint-down(sm) {
+                width: 20px;
+            }
+        }
     }
 
     // .profile-menu__pin
@@ -58,5 +71,9 @@
         border-radius: 8px;  
         color: #FFFFFF;
         padding: 0px 5px;
+        @include media-breakpoint-down(sm) {
+            font-size: 8px;
+            right: -10px;
+        }
     }
 }

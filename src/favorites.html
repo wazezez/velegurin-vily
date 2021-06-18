@@ -1,0 +1,192 @@
+<extends src="../layouts/app.html">
+  <block name="content">
+        <!-- Section -->
+        <section class="page-breadcrumbs" id="page-breadcrumbs">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-12">
+                      <nav role="navigation" class="breadcrumbs" itemscope="" itemtype="http://schema.org/Breadcrumb">
+                          <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                              <a itemprop="item" href="/">
+                                  <span itemprop="name">Главная страница</span>
+                              </a>
+                              <meta itemprop="position" content="1">
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                              <a itemprop="item" href="" class="current">
+                                  <span itemprop="name">Избранное</span>
+                              </a>
+                              <meta itemprop="position" content="2">
+                            </li>
+                          </ol>
+                      </nav>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- /Section -->
+      <!-- Page Content -->
+      <section class="page-content" id="page-catalog">
+        <div class="content-section">
+            <div class="container">
+                <div class="catalog">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h1>Избранные товары</h1>
+                        </div>
+                    </div>
+                    <div class="row flex-md-column-reverse flex-lg-row">
+                        <div class="col-12">
+                            <!-- /Selected Filters -->
+                            <div class="catalog__controls">
+                                <div class="catalog__postcount">
+                                    У вас <span>135</span> товаров
+                                </div>
+                                <div>
+                                    <button class="button js-show-catalog-sidebar">
+                                        Фильтр
+                                    </button>
+                                    <select name="sort" id="" class="right">
+                                        <option data-display="Сортировать">Сортировать</option>
+                                        <option value="popularity">По популярности</option>
+                                        <option value="price-desc">По цене: сначала дешевые</option>
+                                        <option value="price-asc">По цене: сначала дорогие</option>
+                                        <option value="newest">Сначала новинки</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Product List -->
+                            <div class="catalog__products">
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-4 col-6">
+                                      <include src="..//partials/product-card.html">
+                                        {
+                                            "post_url" : "/assets/images/sale-poster.jpg",
+                                            "title": "Ковры со скидками",
+                                            "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                                            "button_text": "Узнать подробнее",
+                                            "label" : [
+                                              "class" : "badge_red",
+                                              "title" : "скидки"
+                                            ]
+                                        }
+                                      </include>
+                                    </div>
+                                    <div class="col-xl-3 col-md-4 col-6">
+                                      <include src="..//partials/product-card.html">
+                                        {
+                                            "post_url" : "/assets/images/sale-poster.jpg",
+                                            "title": "Ковры со скидками",
+                                            "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                                            "button_text": "Узнать подробнее",
+                                            "label" : [
+                                              "class" : "badge_red",
+                                              "title" : "скидки"
+                                            ]
+                                        }
+                                      </include>
+                                    </div>
+                                    <div class="col-xl-3 col-md-4 col-6">
+                                      <include src="..//partials/product-card.html">
+                                        {
+                                            "post_url" : "/assets/images/sale-poster.jpg",
+                                            "title": "Ковры со скидками",
+                                            "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                                            "button_text": "Узнать подробнее",
+                                            "label" : [
+                                              "class" : "badge_red",
+                                              "title" : "скидки"
+                                            ]
+                                        }
+                                      </include>
+                                    </div>
+                                    <div class="col-xl-3 col-md-4 col-6">
+                                      <include src="..//partials/product-card.html">
+                                        {
+                                            "post_url" : "/assets/images/sale-poster.jpg",
+                                            "title": "Ковры со скидками",
+                                            "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                                            "button_text": "Узнать подробнее",
+                                            "label" : [
+                                              "class" : "badge_red",
+                                              "title" : "скидки"
+                                            ]
+                                        }
+                                      </include>
+                                    </div>
+                                    <div class="col-xl-3 col-md-4 col-6">
+                                      <include src="..//partials/product-card.html">
+                                        {
+                                            "post_url" : "/assets/images/sale-poster.jpg",
+                                            "title": "Ковры со скидками",
+                                            "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                                            "button_text": "Узнать подробнее",
+                                            "label" : [
+                                              "class" : "badge_red",
+                                              "title" : "скидки"
+                                            ]
+                                        }
+                                      </include>
+                                    </div>
+                                    <div class="col-xl-3 col-md-4 col-6">
+                                      <include src="..//partials/product-card.html">
+                                        {
+                                            "post_url" : "/assets/images/sale-poster.jpg",
+                                            "title": "Ковры со скидками",
+                                            "description": "Хочется чего-то уникального по выгодной цене?  нас огромный выбор элитных ковров ",
+                                            "button_text": "Узнать подробнее",
+                                            "label" : [
+                                              "class" : "badge_red",
+                                              "title" : "скидки"
+                                            ]
+                                        }
+                                      </include>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Product List -->
+
+                            <!-- Catalog Navigation -->
+
+                            <div class="catalog__load">
+                                <button class="button button_lightgray">Показать еще</button>
+                            </div>
+                            <div class="catalog__nav">
+                                <nav>
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item">...</li>
+                                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                                    </ul>
+                                </nav>
+                                <nav>
+                                    <ul class="pagination pagination-controls">
+                                        <li class="page-item"><a class="page-link" href="#">Назад</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Далее</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- /Catalog Navigation -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.catalog-section -->
+            </div>
+        </div>
+        <!-- /.content-section -->
+
+        <include src="../partials/watched.html"></include>
+        
+        <include src="../partials/company-news.html"></include>
+      
+        <include src="../partials/design-selection.html"></include>
+  
+        <include src="../partials/faq-accordion.html"></include>
+
+      </section>
+      <!-- /Page Content -->
+  </block>
+</extends>

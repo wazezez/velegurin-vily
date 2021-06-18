@@ -1,0 +1,63 @@
+.input-counter {
+    $height:56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: $height;
+    @include media-breakpoint-down(md) {
+        height: 46px;
+    }
+    input {
+        &[type=number] {
+            background-color: #F6F7F8;
+            height: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            border:0px;
+            outline:0px;
+            padding: 0px 10px;
+            min-width: 15px;
+            max-width: 70px;
+            text-align: center;
+            @include media-breakpoint-down(md) {
+                max-width: 50px;
+                font-size: 14px;
+            }
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+              -moz-appearance: textfield;
+            }
+        }
+    }
+    button {
+        background-color: #F6F7F8;
+        height: 100%;
+        border:0px;
+        outline: 0px;
+        transition: 0.3s ease-in-out background-color;
+        padding: 0px 20px;
+        -webkit-tap-highlight-color: transparent;
+        &:hover,
+        &:active {
+            background-color: darken(#F6F7F8,5%);
+        }
+        &:first-of-type {
+            border-radius: 8px 0px 0px 8px;
+        }
+        &:last-of-type {
+            border-radius: 0px 8px 8px 0px;
+        }
+        &:focus {
+            background-color: #F6F7F8;
+        }
+        img {
+            width: 22px;
+            @include media-breakpoint-down(md) {
+                width: 17px;
+            }
+        }
+    }
+}

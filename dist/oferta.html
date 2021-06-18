@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="Skyarov Alexey">
     <meta name="generator" content="Skyarov Alexey">
@@ -13,7 +13,7 @@
   <body>
 
     <!-- Page Header -->
-    <section class="page-header" id="page-header">
+    <header class="page-header" id="page-header">
       <div class="page-header__header">
         <div class="container">
           <div class="row align-items-center">
@@ -22,7 +22,7 @@
                 <a href="index.html" title="Главная страница"><img src="/assets/images/svg/logo.svg" alt="Вили.ру"></a>
               </div>
             </div>
-            <div class="col-xl-6 d-none d-sm-none d-md-none d-lg-flex">
+            <div class="col-xl-6 d-none d-sm-none d-md-none d-lg-none d-xl-flex">
               <ul class="page-header__menu">
                 <li class="active">
                   <a href="about.html" title="О компании">О компании</a>
@@ -31,7 +31,10 @@
                   <a href="exchange.html" title="Гарантия и возврат">Гарантия и возврат</a>
                 </li>
                 <li>
-                  <a href="news.html" title="Блоги и новости">Блоги и новости</a>
+                  <a href="blogs.html" title="Блоги">Блоги</a>
+                </li>
+                <li>
+                  <a href="news.html" title="Новости">Новости</a>
                 </li>
                 <li>
                   <a href="help.html" title="Помощь">Помощь</a>
@@ -47,25 +50,30 @@
                 <button class="button" data-target="#callOrderModal" data-toggle="modal">Заказать звонок</button>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
       <!-- /.page-header__header -->
+    </header>
+    <!-- /Page Header -->
+
+    <!-- Section -->
+    <section class="header-navigation" id="header-navigation">
       <div class="page-header__footer">
         <div class="container">
           <div class="row">
-            <div class="col-xl-2 col-md-2">
-              <button class="page-header__menutoggle js-catalog-toggle js-swap-aria-opened" data-swap="#header-catalog-menu" aria-focused="false">
+            <div class="col-xl-2 col-md-2 col-lg-3">
+              <button class="page-header__menutoggle js-catalog-toggle" data-toggle-menu="#header-catalog-menu" aria-focused="false">
                 <div class="burger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
-                <span>Каталог товаров</span>
+                <span class="d-md-none d-lg-block">Каталог товаров</span>
               </button>
               <!-- /.page-header__menutoggle -->
             </div>
-            <div class="col-xl-6 col-md-4">
+            <div class="col-xl-7 col-md-5 col-lg-6">
               <div class="page-header__search searchbox">
                 <form class="searchbox__form">
                   <input type="text" placeholder="Что ищем?">
@@ -88,9 +96,9 @@
               </div>
               <!-- /.page-header__searchbox -->
             </div>
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-3 col-md-5 col-lg-3">
               <ul class="page-header__profilemenu profile-menu">
-                <li>
+                <!-- <li>
                   <a href="" class="profile-menu__link">
                     <div class="profile-menu__icon">
                       <img src="/assets/images/svg/icons/compare.svg" alt="Сравнение">
@@ -98,18 +106,17 @@
                     </div>
                     Сравнение
                   </a>
-                </li>
+                </li> -->
                 <li>
                   <a href="cabinet.html" class="profile-menu__link">
                     <div class="profile-menu__icon">
                       <img src="/assets/images/svg/icons/profile.svg" alt="Профиль">
-                      <div class="profile-menu__pin">2</div>
                     </div>
-                    Профиль
+                    Кабинет					
                   </a>
                 </li>
                 <li>
-                  <a href="" class="profile-menu__link">
+                  <a href="favorites.html" class="profile-menu__link">
                     <div class="profile-menu__icon">
                       <img src="/assets/images/svg/icons/profile-heart.svg" alt="Избранное">
                       <div class="profile-menu__pin">2</div>
@@ -117,14 +124,104 @@
                     Избранное
                   </a>
                 </li>
-                <li>
+                <li class="js-show-cart-widget">
                   <a href="cart.html" class="profile-menu__link">
                     <div class="profile-menu__icon">
                       <img src="/assets/images/svg/icons/cart.svg" alt="Корзина">
-                      <div class="profile-menu__pin">153</div>
+                      <div class="profile-menu__pin">3</div>
                     </div>
                     Корзина
                   </a>
+                  <div class="cart-widget" id="cart-widget">
+                    <div class="cart-widget__header">
+                      <div class="cart-widget__title">Ваша корзина</div>
+                      <div class="cart-widget__action">
+                        <button>Очистить всё</button>
+                      </div>
+                    </div>
+                    <div class="cart-widget__content">
+                      <div class="cart-widget__list">
+                        <div class="cart-widget__item">
+                          <div class="cart-short-product">
+                            <div class="cart-short-product__poster">
+                              <img src="/assets/images/product.png" alt="Фото продукта">
+                            </div>
+                            <div class="cart-short-product__content">
+                              <div class="cart-short-product__header">
+                                <div class="cart-short-product__title">Carrata, Каррата</div>
+                                <button class="cart-short-product__remove">Удалить</button>
+                              </div>
+                              <div class="cart-short-product__description">Ковер, короткий ворс, 0,8x0,4 м</div>
+                              <div class="cart-short-product__price">171 484 ₽</div>
+                              <div class="cart-short-product__discount">
+                                <div class="cart-short-product__oldprice">191 484 ₽ </div>
+                                <div class="cart-short-product__discountvalue">Экономия 20 000 ₽</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.cart-short-product -->
+                        </div>
+                        <!-- /.cart-widget__item -->
+                        <div class="cart-widget__item">
+                          <div class="cart-short-product">
+                            <div class="cart-short-product__poster">
+                              <img src="/assets/images/product.png" alt="Фото продукта">
+                            </div>
+                            <div class="cart-short-product__content">
+                              <div class="cart-short-product__header">
+                                <div class="cart-short-product__title">Carrata, Каррата</div>
+                                <button class="cart-short-product__remove">Удалить</button>
+                              </div>
+                              <div class="cart-short-product__description">Ковер, короткий ворс, 0,8x0,4 м</div>
+                              <div class="cart-short-product__price">171 484 ₽</div>
+                              <div class="cart-short-product__discount">
+                                <div class="cart-short-product__oldprice">191 484 ₽ </div>
+                                <div class="cart-short-product__discountvalue">Экономия 20 000 ₽</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.cart-short-product -->
+                        </div>
+                        <!-- /.cart-widget__item -->
+                        <div class="cart-widget__item">
+                          <div class="cart-short-product">
+                            <div class="cart-short-product__poster">
+                              <img src="/assets/images/product.png" alt="Фото продукта">
+                            </div>
+                            <div class="cart-short-product__content">
+                              <div class="cart-short-product__header">
+                                <div class="cart-short-product__title">Carrata, Каррата</div>
+                                <button class="cart-short-product__remove">Удалить</button>
+                              </div>
+                              <div class="cart-short-product__description">Ковер, короткий ворс, 0,8x0,4 м</div>
+                              <div class="cart-short-product__price">171 484 ₽</div>
+                              <div class="cart-short-product__discount">
+                                <div class="cart-short-product__oldprice">191 484 ₽ </div>
+                                <div class="cart-short-product__discountvalue">Экономия 20 000 ₽</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.cart-short-product -->
+                        </div>
+                        <!-- /.cart-widget__item -->
+                      </div>
+                    </div>
+                    <div class="cart-widget__footer">
+                      <div class="cart-widget__total">                        
+                        <strong>Товаров:</strong>
+                        5
+                      </div>
+                      <div class="cart-widget__total">
+
+                        <strong>Итог:</strong>
+                        38 132 ₽
+                      </div>
+                      <div class="cart-widget__mainaction">
+                        <a href="cart.html" class="button">Перейти в корзину</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /#cart-widget.cart-widget -->
                 </li>
               </ul>
               <!-- /.page-header__profilemenu -->
@@ -136,7 +233,7 @@
       <div class="page-header__catalog" id="header-catalog-menu" aria-opened="false">
         <div class="container">
           <div class="row">
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-md-3">
               <div class="category-list">
                 <h4>По стилю</h4>
                 <ul class="category-list__menu">
@@ -161,7 +258,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-md-3">
               <div class="category-list">
                 <h4>Современные</h4>
                 <ul class="page-footer__menu category-list__menu">
@@ -188,7 +285,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-md-3">
               <div class="category-list">
                 <h4>Размер</h4>
                 <ul class="category-list__menu">
@@ -222,7 +319,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-md-3">
               <div class="category-list">
                 <h4>Форма</h4>
                 <ul class="category-list__menu">
@@ -243,7 +340,7 @@
                   </li>
                   <li>
                     <a href="">Ковровые дорожки</a>
-                  </li>                  
+                  </li>
                 </ul>
               </div>
               <div class="category-list">
@@ -260,11 +357,11 @@
                   </li>
                   <li>
                     <a href="">Безворсовые</a>
-                  </li>             
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-md-3">
               <div class="category-list">
                 <h4>Страна</h4>
                 <ul class="category-list__menu">
@@ -303,11 +400,11 @@
                   </li>
                   <li>
                     <a href="">Дагестанские</a>
-                  </li>            
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-md-3 mt-md-5 mt-xl-0">
               <div class="category-list">
                 <h4>Высота ворса</h4>
                 <ul class="category-list__menu">
@@ -357,7 +454,562 @@
       </div>
       <!-- /.page-header__catalogmenu -->
     </section>
-    <!-- /Page Header -->
+    <!-- /Section -->
+    
+    <!-- Mobile Header -->
+    <section class="mobile-header" id="mobile-header">
+      <div class="mobile-header__bar">
+        <div class="mobile-header__menu">
+          <!-- Bars menu -->
+          <button class="burger-menu js-show-mobile-menu" id="touch-menu" data-status="closed" data-target="#header-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <!-- /Bars menu -->
+          <div class="mobile-header__logo">
+            <a href="/" title="Перейти на главную"><img src="/assets/images/svg/icons/logo-mobile.svg" alt=""></a>
+          </div>
+        </div>
+        <!-- /.mobile-header__menu -->
+        <div class="mobile-header__actions">
+          <button class="mobile-header__action js-show-mobilesearch">
+            <img src="/assets/images/svg/icons/search-white.svg" alt="Поиск">
+          </button>
+          <button class="mobile-header__action" data-target="#callOrderModal" data-toggle="modal">
+            <img src="/assets/images/svg/icons/phone-call.svg" alt="Заказать звонок">
+          </button>
+          <button class="mobile-header__action" data-target="#authModal" data-toggle="modal">
+            <img src="/assets/images/svg/icons/profile.svg" alt="Профиль">
+          </button>
+          <a href="favorites.html" class="mobile-header__action">
+            <img src="/assets/images/svg/icons/profile-heart.svg" alt="Избранное">
+          </a>
+          <a href="cart.html" class="mobile-header__action">
+            <img src="/assets/images/svg/icons/cart.svg" alt="Корзина">
+            <div class="pin"></div>
+          </a>
+        </div>
+        <!-- /.mobile-header__actions -->
+      </div>
+      <div class="mobile-header__search">
+        <div class="searchbox">
+          <form class="searchbox__form">
+            <input type="text" placeholder="Что ищем?">
+            <button type="submit">
+              <img src="/assets/images/svg/icons/search.svg" alt="Лупа">
+              Найти
+            </button>
+          </form>
+        </div>
+        </div>
+    </section>
+    <!-- /Mobile Header -->
+
+    <!-- Mobile Menu -->
+    <section class="mobile-menu" id="mobile-menu">
+      <div class="menu-screen visible">
+        <div class="menu-screen__header">
+          Каталог
+          <div class="menu-screen__close">
+            <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+          </div>
+        </div>
+        <!-- /.menu-screen__header -->
+        <div class="menu-screen__content">
+
+          <!-- Primary Menu Item-->
+          <div class="mobile-menu__list mobile-menu-list">
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link">
+                <img src="/assets/images/svg/icons/new.svg" alt="">
+                Новинки
+              </a>
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/grid-alt.svg" alt="">
+                По размерам
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Размер
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">60 х 110 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">80 х 150 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">100 х 140 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">120 х 170 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">140 х 200 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">160 х 230 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">200 х 300 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">240 х 340 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">300 х 400 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">300 х 500 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">400 х 500 см</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">400 х 600 см</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/language.svg" alt="">
+                По странам                                
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Страны
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Россия</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Турция</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Бельгия</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Молдавия</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Сербия</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Иран</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Индия</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Китай</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Дагестан</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Египет</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Беларусь</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/layers.svg" alt="">
+                По материалам
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Метариал
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">БЦФ</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Хит-сетт</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Фризе</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Шерсть</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Вискоза</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Хлопок</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Акрил</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Полипропилен</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Полиэстер</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Полиамид</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Шенил</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Шелк</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Бамубковый шелк</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Кожа</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Мех искусственный</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Мех натуральный</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Микрофибра</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Шерсть / шелк</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Шерсть / вискоза</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Шерсть / синтетика</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Викоза / синтетика</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Хлопок / вискоза</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/fit.svg" alt="">
+                По комнатам
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Комната
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Зал</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Спальня</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Гостиная</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Детская</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Кухня</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Столовая</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Холл</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Кабинет</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Офис</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Прихожая</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Коридор</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Ванная</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Туалет</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Балкон</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/cards.svg" alt="">
+                По форме
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Форма
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Прямоугольный</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Овальный</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Круглый</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Квадратный</a>
+                    </div>
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Другие формы</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/contrast.svg" alt="">
+                По стилю
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Стиль
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Ссылка</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/wallpaper.svg" alt="">
+                По бренду
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Бренд
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Ссылка</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link" data-toggle-menu="">
+                <img src="/assets/images/svg/icons/dolar.svg" alt="">
+                По цене
+              </a>
+              <!-- Secondary Menu -->
+              <div class="menu-screen">
+                <div class="menu-screen__header">
+                  <button role="back">
+                    <img src="/assets//images/svg/icons/arrow-prev.svg" alt="">
+                    Цена
+                  </button>
+                  <div class="menu-screen__close">
+                    <img src="/assets/images/svg/icons/cross-black.svg" alt="Закрыть">
+                  </div>
+                </div>
+                <div class="menu-screen__content">
+                  <div class="mobile-menu__list mobile-menu-list">
+                    <div class="mobile-menu-list__item">
+                      <a href="" class="mobile-menu-list__link">Ссылка</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Secondary Menu -->
+            </div>
+            <!-- /Item -->
+            <!-- Item -->
+            <div class="mobile-menu-list__item mobile-menu-list__item_break">
+            </div>
+            <!-- /Item -->
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link">
+                <img src="/assets/images/svg/icons/sticker.svg" alt="">
+                Циновки
+              </a>
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link">
+                <img src="/assets/images/svg/icons/mask.svg" alt="">
+                Коврики
+              </a>
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link">
+                <img src="/assets/images/svg/icons/extension.svg" alt="">                
+                Детские ковры
+              </a>
+            </div>
+            <!-- /Item -->
+
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="" class="mobile-menu-list__link">
+                <img src="/assets/images/svg/icons/tag.svg" alt="">
+                Акции и скидки
+              </a>
+            </div>
+            <!-- /Item -->
+
+          </div>
+          <!-- /.mobile-menu__list -->
+
+        </div>
+        <!-- /.menu-screen__content -->
+        <div class="menu-screen__footer">
+          <div class="mobile-menu-list">
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="about.html" class="mobile-menu-list__link">О компании</a>
+            </div>
+            <!-- /Item -->
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="exchange.html" class="mobile-menu-list__link">Обмен и возврат</a>
+            </div>
+            <!-- /Item -->
+            <!-- Item -->
+            <div class="mobile-menu-list__item">
+              <a href="contacts.html" class="mobile-menu-list__link">Контакты</a>
+            </div>
+            <!-- /Item -->
+          </div>
+        </div>
+        <!-- /.menu-screen__footer -->
+      </div>
+    </section>
+    <!-- /Mobile Menu -->
 
     
         <!-- Section -->
@@ -667,35 +1319,72 @@
         <!-- /Page Content -->
     
 
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="subscribe-widget">
+              <div class="subscribe-widget__content">
+                <div class="subscribe-widget__title">
+                  Подписаться на рассылку
+                </div>
+                <!-- /.subscribe-widget__title -->
+                <div class="subscribe-widget__description">
+                  Подпишитесь на нашу рассылку и получайте одним из первых информацию о распродажах,акциях, скидках и новинках ковров.
+                </div>
+                <!-- /.subscribe-widget__description -->
+                <form action="" class="subscribe-widget__form">
+                  <input type="text" placeholder="Введите ваш email-адрес">
+                  <button type="submit" class="button button_text-large">Подписаться</button>
+                </form>
+                <!-- /.subscribe-widget__form -->
+              </div>
+              <!-- /.subscribe-widget__content -->
+              <div class="subscribe-widget__poster">
+                <img src="/assets/images/at-symbol.png" alt="Собака">
+              </div>
+              <!-- /.subscribe-widget__poster -->
+            </div>
+            <!-- /.subscribe-widget -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Subscribe Section -->
+
     <!-- Page Footer -->
-    <section class="page-footer" id="page-footer">
+    <footer class="page-footer" id="page-footer">
       <div class="page-footer__nav">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-9">
-              <ul>
-                <li>
-                  <a href="#" title="О компании">О компании</a>
-                </li>
-                <li>
-                  <a href="#" title="Гарантия и возврат">Гарантия и возврат</a>
-                </li>
-                <li>
-                  <a href="#" title="Блоги и новости">Блоги и новости</a>
-                </li>
-                <li>
-                  <a href="#" title="Справка">Справка</a>
-                </li>
-                <li>
-                  <a href="#" title="Контакты">Контакты</a>
-                </li>
-              </ul>
+          <div class="row align-items-center">
+            <div class="col-xl-9 col-md-7 d-none d-md-flex d-lg-flex">
+            <ul class="js-crop-menu" data-md-show="3" data-sm-show="3">
+              <li>
+                <a href="{{ route('about') }}" title="О компании">О компании</a>
+              </li>
+              <li>
+                <a href="{{ route('guaranty') }}" title="Гарантия и возврат">Гарантия и возврат</a>
+              </li>
+              <li>
+                <a href="{{ route('blogs') }}" title="Блоги">Блоги</a>
+              </li>
+              <li>
+                <a href="{{ route('news') }}" title="Новости">Новости</a>
+              </li>
+              <li>
+                <a href="{{ route('faq') }}" title="Справка">Справка</a>
+              </li>
+              <li>
+                <a href="{{ route('contacts') }}" title="Контакты">Контакты</a>
+              </li>
+            </ul>
             </div>
-            <div class="col-xl-3">
-              <ul>
-                <li><a href="#"><strong>+7 800 821 23 84</strong></a></li>
-                <li><a href="#" data-toggle="modal" data-target="callOrderModal"><strong>Заказать звонок</strong></a></li>
-              </ul>
+            <div class="col-xl-3 col-md-5">
+            <ul>
+              <li><a href="#"><strong>+7 800 821 23 84</strong></a></li>
+              <li><a href="#" data-target="#callOrderModal" data-toggle="modal" class="footer-button"><strong>Заказать звонок</strong></a></li>
+            </ul>
             </div>
           </div>
         </div>
@@ -704,350 +1393,514 @@
 
       <div class="page-footer__lists category-lists">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Компания</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="О компании ">О компании</a></li>
-                  <li><a href="" title="Блог">Блог </a></li>
-                  <li><a href="" title="Новости">Новости</a></li>
-                  <li><a href="" title="Все товары">Все товары</a></li>
-                  <li><a href="" title="Контакты">Контакты</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Коврики</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Детские ковры">Детские ковры</a></li>
-                  <li><a href="" title="Циновки">Циновки</a></li>
-                  <li><a href="" title="Коврики">Коврики</a></li>
-                  <li><a href="" title="Распродажа">Распродажа</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Покупателям</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="О компании">О компании</a></li>
-                  <li><a href="" title="Адреса магазинов">Адреса магазинов</a></li>
-                  <li><a href="" title="Договор оферы">Договор оферы</a></li>
-                  <li><a href="" title="Конфиденциальность">Конфиденциальность</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-3 offset-xl-2">
-              <div class="page-footer__social">
-                <h4>Наши социальные сети</h4>
-                Подписывайтесь на наш Facebook, Instagram и Вконтакте и будьте в курсе наших последних новостей
-                <ul class="page-footer__socials">
-                    <li><a href="" title="VK"><img src="/assets/images/svg/icons/vk.svg" alt="VK"></a></li>
-                    <li><a href="" title="Facebook"><img src="/assets/images/svg/icons/facebook.svg" alt="Facebook"></a></li>
-                    <li><a href="" title="Instagram"><img src="/assets/images/svg/icons/instagram.svg" alt="Instagram"></a></li>
-                    <li><a href="" title="Youtube"><img src="/assets/images/svg/icons/youtube.svg" alt="Youtube"></a></li>
-                </ul>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-xl-2 col-md-3">
+          <div class="page-footer__list category-list">
+            <h4>Компания</h4>
+            <ul class="page-footer__menu category-list__menu">
+            <li><a href="" title="О компании ">О компании</a></li>
+            <li><a href="" title="Блог">Блог </a></li>
+            <li><a href="" title="Новости">Новости</a></li>
+            <li><a href="" title="Все товары">Все товары</a></li>
+            <li><a href="" title="Контакты">Контакты</a></li>
+            </ul>
           </div>
+          </div>
+          <div class="col-xl-2 col-md-3">
+          <div class="page-footer__list category-list">
+            <h4>Коврики</h4>
+            <ul class="page-footer__menu category-list__menu">
+            <li><a href="" title="Детские ковры">Детские ковры</a></li>
+            <li><a href="" title="Циновки">Циновки</a></li>
+            <li><a href="" title="Коврики">Коврики</a></li>
+            <li><a href="" title="Распродажа">Распродажа</a></li>
+            </ul>
+          </div>
+          </div>
+          <div class="col-xl-2 col-md-3">
+          <div class="page-footer__list category-list">
+            <h4>Покупателям</h4>
+            <ul class="page-footer__menu category-list__menu">
+            <li><a href="" title="О компании">О компании</a></li>
+            <li><a href="" title="Адреса магазинов">Адреса магазинов</a></li>
+            <li><a href="" title="Договор оферы">Договор оферы</a></li>
+            <li><a href="" title="Конфиденциальность">Конфиденциальность</a></li>
+            </ul>
+          </div>
+          </div>
+          <div class="col-xl-3 col-md-3 offset-xl-2">
+          <div class="page-footer__social">
+            <h4>Социальные сети</h4>
+            Подписывайтесь на наш Facebook, Instagram и Вконтакте и будьте в курсе наших последних новостей
+            <ul class="page-footer__socials">
+              <li><a href="" title="VK"><img src="/assets/images/svg/icons/vk.svg" alt="VK"></a></li>
+              <li><a href="" title="Facebook"><img src="/assets/images/svg/icons/facebook.svg" alt="Facebook"></a></li>
+              <li><a href="" title="Instagram"><img src="/assets/images/svg/icons/instagram.svg" alt="Instagram"></a></li>
+              <li><a href="" title="Youtube"><img src="/assets/images/svg/icons/youtube.svg" alt="Youtube"></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
         </div>
       </div>
       <!-- /.page-footer__list category-lists -->
 
-      <div class="page-footer__lists category-lists">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>По стилю</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Классические">Классические</a></li>
-                  <li><a href="" title="Традиционные">Традиционные</a></li>
-                  <li><a href="" title="Европейская классика">Европейская классика</a></li>
-                  <li><a href="" title="Этнические">Этнические</a></li>
-                  <li><a href="" title="Зиглер">Зиглер</a></li>
-                  <li><a href="" title="Килимы и сумахи">Килимы и сумахи</a></li>
-                  <li><a href="" title="Классические">Классические</a></li>
-                  <li><a href="" title="Современные">Современные</a></li>
-                  <li><a href="" title="Винтажные">Винтажные</a></li>
-                </ul>
-              </div>
 
-              <div class="page-footer__list category-list">
-                <h4>Производство</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Ручная работа">Ручная работа</a></li>
-                  <li><a href="" title="Машинная работа">Машинная работа</a></li>
-                  <li><a href="" title="Ручная набивка">Ручная набивка</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Современные</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Неоклассика">Неоклассика</a></li>
-                  <li><a href="" title="Модерн">Модерн</a></li>
-                  <li><a href="" title="Дизайнерские">Дизайнерские</a></li>
-                </ul>
-              </div>
-              <div class="page-footer__list category-list">
-                <h4>Дизайн</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Абстракция">Абстракция</a></li>
-                  <li><a href="" title="Стертая классика">Стертая классика</a></li>
-                  <li><a href="" title="Геометрия">Геометрия</a></li>
-                  <li><a href="" title="Цветы и растения">Цветы и растения</a></li>
-                  <li><a href="" title="Авангард">Авангард</a></li>
-                </ul>
-              </div>
-              <div class="page-footer__list category-list">
-                <h4>Наличие</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Ковры в наличии">Ковры в наличии</a></li>
-                  <li><a href="" title="Ковры на заказ">Ковры на заказ</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Размер</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li><a href="" title="Стандартные размеры">Стандартные размеры</a></li>
-                  <li><a href="" title="до 200 х 150 см">до 200 х 150 см</a></li>
-                  <li><a href="" title="240 х 170 см">240 х 170 см</a></li>
-                  <li><a href="" title="300 х 200 см">300 х 200 см</a></li>
-                  <li><a href="" title="300 х 250 см">300 х 250 см</a></li>
-                  <li><a href="" title="350 х 250 см">350 х 250 см</a></li>
-                  <li><a href="" title="400 х 300 см">400 х 300 см</a></li>
-                  <li><a href="" title="450 х 350 см">450 х 350 см</a></li>
-                  <li><a href="" title="Очень большие ковры">Очень большие ковры</a></li>
-                  <li><a href="" title="Указать свой">Указать свой</a></li>
-                </ul>
-              </div>
-              <div class="page-footer__list category-list">
-                <h4>Скидка</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li>
-                    <a href="">Любимые ковры -20%</a>
-                  </li>
-                  <li>
-                    <a href="">Распродажа</a>
-                  </li>
-                  <li>
-                    <a href="">Хиты продаж</a>
-                  </li>
-                  <li>
-                    <a href="">Новинки</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Форма</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li>
-                    <a href="">Прямоугольные</a>
-                  </li>
-                  <li>
-                    <a href="">Квадратные</a>
-                  </li>
-                  <li>
-                    <a href="">Круглые</a>
-                  </li>
-                  <li>
-                    <a href="">Овальные</a>
-                  </li>
-                  <li>
-                    <a href="">Парные</a>
-                  </li>
-                  <li>
-                    <a href="">Ковровые дорожки</a>
-                  </li>                  
-                </ul>
-              </div>
-              <div class="page-footer__list category-list">
-                <h4>Материал</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li>
-                    <a href="">Шерстяные</a>
-                  </li>
-                  <li>
-                    <a href="">Шелковые</a>
-                  </li>
-                  <li>
-                    <a href="">Шерсть и шёлк</a>
-                  </li>
-                  <li>
-                    <a href="">Безворсовые</a>
-                  </li>             
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Страна</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li>
-                    <a href="">Персидские</a>
-                  </li>
-                  <li>
-                    <a href="">Афганские</a>
-                  </li>
-                  <li>
-                    <a href="">Индийские</a>
-                  </li>
-                  <li>
-                    <a href="">Кавказские</a>
-                  </li>
-                  <li>
-                    <a href="">Пакистанские</a>
-                  </li>
-                  <li>
-                    <a href="">Турецкие</a>
-                  </li>
-                  <li>
-                    <a href="">Непальские</a>
-                  </li>
-                  <li>
-                    <a href="">Тибетские</a>
-                  </li>
-                  <li>
-                    <a href="">Азербайджанские</a>
-                  </li>
-                  <li>
-                    <a href="">Китайские</a>
-                  </li>
-                  <li>
-                    <a href="">Иранские</a>
-                  </li>
-                  <li>
-                    <a href="">Дагестанские</a>
-                  </li>            
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-2">
-              <div class="page-footer__list category-list">
-                <h4>Высота ворса</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li>
-                    <a href="">Длинный ворс, Шегги</a>
-                  </li>
-                  <li>
-                    <a href="">Короткий ворс</a>
-                  </li>
-                  <li>
-                    <a href="">Средний ворс</a>
-                  </li>
-                  <li>
-                    <a href="">Безворсовый</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="page-footer__list category-list">
-                <h4>Комната</h4>
-                <ul class="page-footer__menu category-list__menu">
-                  <li>
-                    <a href="">Кухня</a>
-                  </li>
-                  <li>
-                    <a href="">Гостиная</a>
-                  </li>
-                  <li>
-                    <a href="">Баня</a>
-                  </li>
-                  <li>
-                    <a href="">Дача</a>
-                  </li>
-                  <li>
-                    <a href="">Загородный дом</a>
-                  </li>
-                  <li>
-                    <a href="">Комната отдыха</a>
-                  </li>
-                  <li>
-                    <a href="">Детская комната</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.page-footer__list category-lists -->
 
       <div class="page-footer__description footer-description">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-2">
-              <div class="footer-description__logo">
-                <img src="/assets/images/svg/footer-logo.svg" alt="Vili.ru">
-              </div>              
-            </div>
-            <div class="col-xl-10">
-              <div class="footer-description__text">
-                Все ресурсы сайта www.vili.ru, включая (но не ограничиваясь) текстовую, графическую, фотографическую и видео информацию, структуру, дизайн и оформление страниц, товарные знаки, доменное имя, фирменное наименование являются объектами авторского права и прав на интеллектуальную собственность, защищены российским законодательством и международными соглашениями об охране авторских прав и интеллектуальной собственности.
-              </div>
-            </div>
+        <div class="row align-items-center">
+          <div class="col-xl-2 col-md-3">
+          <div class="footer-description__logo">
+            <img src="/assets/images/svg/footer-logo.svg" alt="Vili.ru">
+          </div>              
           </div>
+          <div class="col-xl-10 col-md-9">
+          <div class="footer-description__text">
+            Все ресурсы сайта www.vili.ru, включая (но не ограничиваясь) текстовую, графическую, фотографическую и видео информацию, структуру, дизайн и оформление страниц, товарные знаки, доменное имя, фирменное наименование являются объектами авторского права и прав на интеллектуальную собственность, защищены российским законодательством и международными соглашениями об охране авторских прав и интеллектуальной собственности.
+          </div>
+          </div>
+        </div>
         </div>
       </div>
       <!-- /.page-footer__description -->
 
-      <div class="page-footer__nav page-footer__nav_largespacing">
+      <div class="page-footer__nav page-footer__nav_largespacing d-none d-md-block">
         <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <ul>
-                <li><a href="#" title="Об охране интеллектуальной собственности">Об охране интеллектуальной собственности</a></li>
-                <li><a href="policy.html" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
-                <li><a href="oferta.html" title="Публичная оферта">Публичная оферта</a></li>
-              </ul>
-            </div>
+        <div class="row">
+          <div class="col-xl-12">
+          <ul>
+            <li><a href="#" title="Об охране интеллектуальной собственности">Об охране интеллектуальной собственности</a></li>
+            <li><a href="{{route('politika')}}" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
+            <li><a href="{{route('oferta')}}" title="Публичная оферта">Публичная оферта</a></li>
+          </ul>
           </div>
+        </div>
         </div>
       </div>
       <!-- /.page-footer__nav -->
 
       <div class="page-footer__copy">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-xl-8">
-              © 2006—2021, АО «Вили.ру», официальный сайт, лицензия ЦБ РФ № 2673
-            </div>
-            <div class="col-xl-4">
-              <ul class="page-footer__paymentslist">
-                <li>
-                  <img src="/assets/images/svg/icons/visa.svg" alt="Visa">
-                </li>
-                <li>
-                  <img src="/assets/images/svg/icons/gpay.svg" alt="Google Pay">
-                </li>
-                <li>
-                  <img src="/assets/images/svg/icons/yandex.svg" alt="Yandex Money">
-                </li>
-                <li>
-                  <img src="/assets/images/svg/icons/mastercard.svg" alt="Mastercard">
-                </li>
-                <li>
-                  <img src="/assets/images/svg/icons/qiwi.svg" alt="Qiwi">
-                </li>
-                <li>
-                  <img src="/assets/images/svg/icons/applepay.svg" alt="Apple Pay">
-                </li>
-              </ul>
-            </div>
+        <div class="row align-items-center flex-column-reverse flex-sm-row">
+          <div class="col-xl-8 col-md-5">
+            © 2006—2021, АО «Вили.ру», официальный сайт, лицензия ЦБ РФ № 2673
           </div>
+          <div class="col-xl-4 col-md-7">
+            <ul class="page-footer__paymentslist">
+              <li>
+              <img src="/assets/images/svg/icons/visa.svg" alt="Visa">
+              </li>
+              <li>
+              <img src="/assets/images/svg/icons/gpay.svg" alt="Google Pay">
+              </li>
+              <li>
+              <img src="/assets/images/svg/icons/yandex.svg" alt="Yandex Money">
+              </li>
+              <li>
+              <img src="/assets/images/svg/icons/mastercard.svg" alt="Mastercard">
+              </li>
+              <li>
+              <img src="/assets/images/svg/icons/qiwi.svg" alt="Qiwi">
+              </li>
+              <li>
+              <img src="/assets/images/svg/icons/applepay.svg" alt="Apple Pay">
+              </li>
+            </ul>
+          </div>
+        </div>
         </div>
       </div>
       <!-- /.page-footer__copy -->
-      
-    </section>
+
+    </footer>
     <!-- /Page Footer -->
+
+    <!-- Sign Method Modal -->
+<div class="modal fade" id="signMethodModal" tabindex="-1" role="dialog" aria-labelledby="signMethodModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Выполните вход</div>
+                <div class="modal-description">Выполните вход или зарегистрируйтесь, чтобы отслеживать заказы и просматривать историю покупок</div>
+            </div>
+            <div class="modal-actions">
+                <div class="modal-action">
+                    <button class="button" data-toggle="modal" data-target="#authModal">Войти</button>
+                </div>
+                <div class="modal-action">
+                    <button class="button button_lightgray" data-toggle="modal" data-target="#registrationModal">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Выполните вход</div>
+                <div class="modal-description">Выполните вход или разегистрируйтесь чтобы отслеживать заказы и просматривать историю</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Введите e-mail">
+                    <label>E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Введите пароль">
+                    <label>Пароль</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button">Войти</button>
+                    <button class="button button_lightgray" data-toggle="modal" data-target="#forgetPasswordModal" type="button">Забыли пароль?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Регистрация</div>
+                <div class="modal-description">Пожалуйста введите ваш  email адрес. Придумайте и подвтердите ваш пароль и следуйте инструкциям</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Введите e-mail">
+                    <label>E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Введите пароль">
+                    <label>Пароль</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Повторите пароль">
+                    <label>Повторите пароль</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button">Зарегистрироваться</button>
+                    <button class="button button_lightgray" data-toggle="modal" data-target="#authModal" type="button">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Forget Password Modal -->
+<div class="modal fade" id="forgetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgetPasswordModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Забыли пароль?</div>
+                <div class="modal-description">Введите адрес электронной почты, указанный при регистрации и мы вышлем вам дальнейшие инструкции по восстановлению аккаунта</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Введите e-mail">
+                    <label>E-mail</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button button_gradient_red">Cбросить пароль</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Заявка отправлена</div>
+                <div class="modal-description">Инструкция по востановлению пароля отправлена вам на johndoe@mail.com следуйте инструкциям</div>
+            </div>
+            <div class="modal-actions">
+                <div class="modal-action">
+                    <button type="submit" class="button" data-dismiss="modal">Понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call Order Modal -->
+<div class="modal fade" id="callOrderModal" tabindex="-1" role="dialog" aria-labelledby="callOrderModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Заказ звонка</div>
+                <div class="modal-description">Закажите звонок и наш менеджер свяжется с вами через 5 минут</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите ваше имя">
+                    <label>Имя</label>
+                </div>
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите номер телефона">
+                    <label>Телефон</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button">Заказать звонок</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Call Order Success Modal -->
+<div class="modal fade" id="callOrderSuccessModal" tabindex="-1" role="dialog" aria-labelledby="callOrderSuccessModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Спасибо</div>
+                <div class="modal-description">Вы заказали звонок на номер: +7 910 776 62 23 Наш менеджер свяжется с вами в ближайшее время</div>
+            </div>
+            <div class="modal-actions">
+                <div class="modal-action">
+                    <button type="submit" class="button" data-dismiss="modal">Перейти на сайт</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- One Tap Modal -->
+<div class="modal fade" id="oneTapModal" tabindex="-1" role="dialog" aria-labelledby="oneTapModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Купить в один клик</div>
+                <div class="modal-description">Оставьте свои данные, и наш менеджер свяжется с вами в ближайшее время</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите ваше имя">
+                    <label>Имя</label>
+                </div>
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите номер телефона">
+                    <label>Номер вашего телефона</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button button_gradient_green">Жду звонка</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Product Quick View -->
+<div class="modal product-preview-modal fade" id="productQuickView" tabindex="-1" role="dialog" aria-labelledby="productQuickViewTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="product-preview">
+                <div class="product">
+                    <!-- Product: main info -->
+                    <div class="row">
+                        <div class="col-xl-7 col-md-7">
+                            <div class="product__preview">
+                                <div class="product__poster">
+                                    <div class="product__badges">
+                                        <div class="product__badge badge badge_green">новинка</div>
+                                        <div class="product__badge badge badge_red">распродажа</div>
+                                        <div class="product__badge badge badge_red">25%</div>
+                                    </div>
+                                    <!-- /.product__badges -->
+                                    <div class="product__slider product-slider js-fullproduct-slider" id="preview-slider-product-1">
+                                        <div class="product-slider__item"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        <div class="product-slider__item"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        <div class="product-slider__item"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                    </div>
+                                    <!-- /.product__slider -->
+                                    <div class="slider__nav">
+                                        <button class="slider-button js-slider-prev" data-slider="#preview-slider-product-1">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 12.5523 19.5523 13 19 13L7.83 13L12.7104 17.8804C13.1019 18.2719 13.1004 18.9074 12.7075 19.2975C12.3166 19.6857 11.6849 19.6849 11.2954 19.2954L4.70711 12.7071C4.31658 12.3166 4.31658 11.6834 4.70711 11.2929L11.2947 4.70531C11.6842 4.31578 12.3158 4.31578 12.7053 4.70531C13.0946 5.0946 13.0949 5.72568 12.7059 6.11531L7.83 11L19 11C19.5523 11 20 11.4477 20 12Z" fill="#333333"></path>
+                                          </svg>                    
+                                        </button>
+                                        <button class="slider-button js-slider-next" data-slider="#preview-slider-product-1">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11L16.17 11L11.2896 6.11961C10.8981 5.72811 10.8996 5.09262 11.2925 4.70251C11.6834 4.31434 12.3151 4.31506 12.7046 4.70461L19.2929 11.2929C19.6834 11.6834 19.6834 12.3166 19.2929 12.7071L12.7053 19.2947C12.3158 19.6842 11.6842 19.6842 11.2947 19.2947C10.9054 18.9054 10.9051 18.2743 11.2941 17.8847L16.17 13L5 13C4.44771 13 4 12.5523 4 12Z" fill="#333333"></path>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                      <!-- /.slider__nav -->
+                                </div>
+                            </div>
+                            <!-- /.product__previews -->
+                        </div>
+                        <div class="col-xl-5 col-md-5">
+                            <div class="product__info">
+                                <div class="product__badges">
+                                    <div class="product-badge badge badge_gradient_green">товар в наличии на складе</div>
+                                </div>
+                                <div class="product__title">Индийский ковёршерстяной Carrata, Каррата</div>
+                                <div class="product__description">Ковер, короткий ворс, шерсть, шелк</div>
+                                <div class="product__transferdate">
+                                    Приедет к вам <span class="text-primary">23.02.2021</span>
+                                </div>
+                                <!-- <div class="product__infotable">
+                                    <h3>О товаре</h3>
+                                    <table>
+                                        <tr>
+                                            <td>Тип</td>
+                                            <td><div class="text-primary">Ковёр</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Материал</td>
+                                            <td><div class="text-primary">Хлопок, микрополиэстер</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Длина, м</td>
+                                            <td><div class="text-primary">0.8</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ширина, м</td>
+                                            <td><div class="text-primary">0.5</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Высота ворса, мм</td>
+                                            <td><div class="text-primary">45</div></td>
+                                        </tr>
+                                    </table>
+                                </div> -->
+                                <form action="" class="product__form">
+                                    <div class="product__filters">
+                                        <div class="product__filter product-filter">
+                                            <div class="product-filter__title">
+                                                Выберите размер
+                                            </div>
+                                            <div class="product-filter__option">
+                                                <select name="size" class="select-grid-style">
+                                                    <option data-display="Размер">Размер</option>
+                                                    <option value="1х1">1х1</option>
+                                                    <option value="1х2">1х2</option>
+                                                    <option value="1х3">1х3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="product__filter product-filter">
+                                            <div class="product-filter__title">
+                                                Укажите количество
+                                            </div>
+                                            <div class="product-filter__option">
+                                                <div class="input-counter js-input-counter">
+                                                    <button data-action="remove" type="button">
+                                                        <img src="/assets/images/svg/icons/minus.svg" alt="Минус">
+                                                    </button>
+                                                    <input type="number" name="product_count" value="1" min="1">
+                                                    <button data-action="add" type="button">
+                                                        <img src="/assets/images/svg/icons/plus.svg" alt="Плюс">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.product__filters -->
+                                    <div class="product__price">206 484 ₽</div>
+                                    <!-- /.product__price -->
+                                    <div class="product__discount">
+                                        <div class="product__oldprice">191 484 ₽ </div>
+                                        <div class="product__discountvalue">Экономия 20 000 ₽</div>
+                                        <div class="product__creditvalue">
+                                            можно в кредит от 867 ₽ в месяц 
+                                        </div>
+                                    </div>
+
+                                    <div class="product__actions">
+                                        <button class="button button_addtocart" title="Добавит в корзину" type="submit">
+                                            <span class="d-none d-lg-block">Добавить в корзину</span>
+                                            <span class="d-block d-lg-none">В корзину</span>
+                                        </button>
+                                        <button class="button button_like" title="Добавить в избранное" type="button">
+                                            <img src="/assets/images/svg/icons/heart_.svg" alt="Добавить в избранное" class="svg">
+                                        </button>
+                                        <button class="button button_gradient_green product__buyonetap" data-toggle="modal" data-target="#oneTapModal" type="button">
+                                            Купить в 1 клик
+                                        </button>
+                                    </div>
+
+
+                                </form>
+                                <!-- /.product__form -->
+                            </div>
+                            <!-- /.product__info -->
+                        </div>
+                    </div>
+                    <!-- /Product: main info -->
+                </div>
+                <!-- /.product -->
+                <div class="product-preview__controls">
+                    <a href="product.html" class="product-preview__control">Больше информации</a>
+                    <button class="product-preview__control text-primary js-copy-to-clipboard" data-link="https://google.com">Скопировать ссылку</button>
+                </div>
+            </div>
+            <!-- /.product-preview -->
+        </div>
+    </div>
+</div>
+
+    <!-- Section -->
+    <section class="cookie-notification" id="cookie-notification">
+      <div class="cookie-notification__message">
+        Мы используем файлы cookie, чтобы улучшить сайт для вас
+        <button class="js-cookie-notify-close">Понятно</button>
+      </div>
+    </section>
+    <!-- /Section -->
 
   <script src="/assets/js/scripts.js"></script>
   </body>

@@ -42,7 +42,7 @@
     shamrock: #45cea2  
   );
   @each $name, $color in $colors {
-    .bg-#{$name} {
+    .bg-#{''+$name+''} {
       background-color: $color;  
     }
   }
@@ -65,7 +65,7 @@
   transition: 0.2s ease-in border-color;
   border:1px solid transparent;
   &:focus {
-    border-color:rgba($primary-color,.5);
+    border-color:rgba(#8a8a8a,.5);
   }
   &.input-error {
       border-color:rgba($bg-red,.5);

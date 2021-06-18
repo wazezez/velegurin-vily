@@ -1,0 +1,376 @@
+<!-- Sign Method Modal -->
+<div class="modal fade" id="signMethodModal" tabindex="-1" role="dialog" aria-labelledby="signMethodModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Выполните вход</div>
+                <div class="modal-description">Выполните вход или зарегистрируйтесь, чтобы отслеживать заказы и просматривать историю покупок</div>
+            </div>
+            <div class="modal-actions">
+                <div class="modal-action">
+                    <button class="button" data-toggle="modal" data-target="#authModal">Войти</button>
+                </div>
+                <div class="modal-action">
+                    <button class="button button_lightgray" data-toggle="modal" data-target="#registrationModal">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal fade" id="authModal" tabindex="-1" role="dialog" aria-labelledby="authModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Выполните вход</div>
+                <div class="modal-description">Выполните вход или разегистрируйтесь чтобы отслеживать заказы и просматривать историю</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Введите e-mail">
+                    <label>E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Введите пароль">
+                    <label>Пароль</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button">Войти</button>
+                    <button class="button button_lightgray" data-toggle="modal" data-target="#forgetPasswordModal" type="button">Забыли пароль?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Регистрация</div>
+                <div class="modal-description">Пожалуйста введите ваш  email адрес. Придумайте и подвтердите ваш пароль и следуйте инструкциям</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Введите e-mail">
+                    <label>E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Введите пароль">
+                    <label>Пароль</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Повторите пароль">
+                    <label>Повторите пароль</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button">Зарегистрироваться</button>
+                    <button class="button button_lightgray" data-toggle="modal" data-target="#authModal" type="button">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Forget Password Modal -->
+<div class="modal fade" id="forgetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgetPasswordModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Забыли пароль?</div>
+                <div class="modal-description">Введите адрес электронной почты, указанный при регистрации и мы вышлем вам дальнейшие инструкции по восстановлению аккаунта</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Введите e-mail">
+                    <label>E-mail</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button button_gradient_red">Cбросить пароль</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Заявка отправлена</div>
+                <div class="modal-description">Инструкция по востановлению пароля отправлена вам на johndoe@mail.com следуйте инструкциям</div>
+            </div>
+            <div class="modal-actions">
+                <div class="modal-action">
+                    <button type="submit" class="button"  data-dismiss="modal">Понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call Order Modal -->
+<div class="modal fade" id="callOrderModal" tabindex="-1" role="dialog" aria-labelledby="callOrderModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Заказ звонка</div>
+                <div class="modal-description">Закажите звонок и наш менеджер свяжется с вами через 5 минут</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите ваше имя">
+                    <label>Имя</label>
+                </div>
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите номер телефона">
+                    <label>Телефон</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button">Заказать звонок</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Call Order Success Modal -->
+<div class="modal fade" id="callOrderSuccessModal" tabindex="-1" role="dialog" aria-labelledby="callOrderSuccessModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Спасибо</div>
+                <div class="modal-description">Вы заказали звонок на номер: +7 910 776 62 23 Наш менеджер свяжется с вами в ближайшее время</div>
+            </div>
+            <div class="modal-actions">
+                <div class="modal-action">
+                    <button type="submit" class="button"  data-dismiss="modal">Перейти на сайт</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- One Tap Modal -->
+<div class="modal fade" id="oneTapModal" tabindex="-1" role="dialog" aria-labelledby="oneTapModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="modal-header">
+                <div class="modal-title">Купить в один клик</div>
+                <div class="modal-description">Оставьте свои данные, и наш менеджер свяжется с вами в ближайшее время</div>
+            </div>
+            <form action="" class="form modal-form">
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите ваше имя">
+                    <label>Имя</label>
+                </div>
+                <div class="input-field">
+                    <input type="tel" placeholder="Укажите номер телефона">
+                    <label>Номер вашего телефона</label>
+                </div>
+                <div class="form__action modal-form__action">
+                    <button type="submit" class="button button_gradient_green">Жду звонка</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Product Quick View -->
+<div class="modal product-preview-modal fade" id="productQuickView" tabindex="-1" role="dialog" aria-labelledby="productQuickViewTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="/assets/images/svg/icons/modal-close.svg" alt="Закрыть">
+                </button>
+            </div>
+            <div class="product-preview">
+                <div class="product">
+                    <!-- Product: main info -->
+                    <div class="row">
+                        <div class="col-xl-7 col-md-7">
+                            <div class="product__preview">
+                                <div class="product__poster">
+                                    <div class="product__badges">
+                                        <div class="product__badge badge badge_green">новинка</div>
+                                        <div class="product__badge badge badge_red">распродажа</div>
+                                        <div class="product__badge badge badge_red">25%</div>
+                                    </div>
+                                    <!-- /.product__badges -->
+                                    <div class="product__slider product-slider js-fullproduct-slider" id="preview-slider-product-1">
+                                        <div class="product-slider__item"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        <div class="product-slider__item"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                        <div class="product-slider__item"><img src="/assets/images/carpet-product.jpg" alt=""></div>
+                                    </div>
+                                    <!-- /.product__slider -->
+                                    <div class="slider__nav">
+                                        <button class="slider-button js-slider-prev" data-slider="#preview-slider-product-1">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 12.5523 19.5523 13 19 13L7.83 13L12.7104 17.8804C13.1019 18.2719 13.1004 18.9074 12.7075 19.2975C12.3166 19.6857 11.6849 19.6849 11.2954 19.2954L4.70711 12.7071C4.31658 12.3166 4.31658 11.6834 4.70711 11.2929L11.2947 4.70531C11.6842 4.31578 12.3158 4.31578 12.7053 4.70531C13.0946 5.0946 13.0949 5.72568 12.7059 6.11531L7.83 11L19 11C19.5523 11 20 11.4477 20 12Z" fill="#333333"/>
+                                          </svg>                    
+                                        </button>
+                                        <button class="slider-button js-slider-next" data-slider="#preview-slider-product-1">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11L16.17 11L11.2896 6.11961C10.8981 5.72811 10.8996 5.09262 11.2925 4.70251C11.6834 4.31434 12.3151 4.31506 12.7046 4.70461L19.2929 11.2929C19.6834 11.6834 19.6834 12.3166 19.2929 12.7071L12.7053 19.2947C12.3158 19.6842 11.6842 19.6842 11.2947 19.2947C10.9054 18.9054 10.9051 18.2743 11.2941 17.8847L16.17 13L5 13C4.44771 13 4 12.5523 4 12Z" fill="#333333"/>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                      <!-- /.slider__nav -->
+                                </div>
+                            </div>
+                            <!-- /.product__previews -->
+                        </div>
+                        <div class="col-xl-5 col-md-5">
+                            <div class="product__info">
+                                <div class="product__badges">
+                                    <div class="product-badge badge badge_gradient_green">товар в наличии на складе</div>
+                                </div>
+                                <div class="product__title">Индийский ковёршерстяной Carrata, Каррата</div>
+                                <div class="product__description">Ковер, короткий ворс, шерсть, шелк</div>
+                                <div class="product__transferdate">
+                                    Приедет к вам <span class="text-primary">23.02.2021</span>
+                                </div>
+                                <!-- <div class="product__infotable">
+                                    <h3>О товаре</h3>
+                                    <table>
+                                        <tr>
+                                            <td>Тип</td>
+                                            <td><div class="text-primary">Ковёр</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Материал</td>
+                                            <td><div class="text-primary">Хлопок, микрополиэстер</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Длина, м</td>
+                                            <td><div class="text-primary">0.8</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ширина, м</td>
+                                            <td><div class="text-primary">0.5</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Высота ворса, мм</td>
+                                            <td><div class="text-primary">45</div></td>
+                                        </tr>
+                                    </table>
+                                </div> -->
+                                <form action="" class="product__form">
+                                    <div class="product__filters">
+                                        <div class="product__filter product-filter">
+                                            <div class="product-filter__title">
+                                                Выберите размер
+                                            </div>
+                                            <div class="product-filter__option">
+                                                <select name="size" class="select-grid-style">
+                                                    <option data-display="Размер">Размер</option>
+                                                    <option value="1х1">1х1</option>
+                                                    <option value="1х2">1х2</option>
+                                                    <option value="1х3">1х3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="product__filter product-filter">
+                                            <div class="product-filter__title">
+                                                Укажите количество
+                                            </div>
+                                            <div class="product-filter__option">
+                                                <div class="input-counter js-input-counter">
+                                                    <button data-action="remove" type="button">
+                                                        <img src="/assets/images/svg/icons/minus.svg" alt="Минус">
+                                                    </button>
+                                                    <input type="number" name="product_count" value="1" min="1">
+                                                    <button data-action="add" type="button">
+                                                        <img src="/assets/images/svg/icons/plus.svg" alt="Плюс">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.product__filters -->
+                                    <div class="product__price">206 484 ₽</div>
+                                    <!-- /.product__price -->
+                                    <div class="product__discount">
+                                        <div class="product__oldprice">191 484 ₽ </div>
+                                        <div class="product__discountvalue">Экономия 20 000 ₽</div>
+                                        <div class="product__creditvalue">
+                                            можно в кредит от 867 ₽ в месяц 
+                                        </div>
+                                    </div>
+
+                                    <div class="product__actions">
+                                        <button class="button button_addtocart" title="Добавит в корзину" type="submit">
+                                            <span class="d-none d-lg-block">Добавить в корзину</span>
+                                            <span class="d-block d-lg-none">В корзину</span>
+                                        </button>
+                                        <button class="button button_like" title="Добавить в избранное" type="button">
+                                            <img src="/assets/images/svg/icons/heart_.svg" alt="Добавить в избранное" class="svg">
+                                        </button>
+                                        <button class="button button_gradient_green product__buyonetap" data-toggle="modal" data-target="#oneTapModal" type="button">
+                                            Купить в 1 клик
+                                        </button>
+                                    </div>
+
+
+                                </form>
+                                <!-- /.product__form -->
+                            </div>
+                            <!-- /.product__info -->
+                        </div>
+                    </div>
+                    <!-- /Product: main info -->
+                </div>
+                <!-- /.product -->
+                <div class="product-preview__controls">
+                    <a href="product.html" class="product-preview__control">Больше информации</a>
+                    <button class="product-preview__control text-primary js-copy-to-clipboard" data-link="https://google.com">Скопировать ссылку</button>
+                </div>
+            </div>
+            <!-- /.product-preview -->
+        </div>
+    </div>
+</div>

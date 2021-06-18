@@ -9,6 +9,9 @@
     border-radius: 8px;
     background-color: $bg-gray;
     border:0px;
+    @include media-breakpoint-down(md) {
+        height: 46px;
+    }
     &:after {
         content:'';
         background: url(../images/svg/icons/nice-select-arrow.svg) 50% 50% no-repeat;
@@ -28,10 +31,14 @@
         font-weight: bold;
         font-size: 16px;
         line-height: 20px;
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
     }
     .list {
         box-shadow: 0px 101px 130px rgba(0, 0, 0, 0.02), 0px 50.5493px 65.0635px rgba(0, 0, 0, 0.0152067), 0px 30.4485px 39.1912px rgba(0, 0, 0, 0.0130318), 0px 19.513px 25.1158px rgba(0, 0, 0, 0.0114179), 0px 12.6468px 16.278px rgba(0, 0, 0, 0.01), 0px 7.961px 10.2468px rgba(0, 0, 0, 0.0085821), 0px 4.57409px 5.88744px rgba(0, 0, 0, 0.00696822), 0px 2.01317px 2.59121px rgba(0, 0, 0, 0.00479335);
         border-radius: 12px;
+        width: 100%;
         li {
             font-weight: 500;
             font-size: 14px;
@@ -43,6 +50,23 @@
             align-items: center;
             padding: 0px 16px;
             font-family: inherit;
+        }
+    }
+    &.select-grid-style {
+        .list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            li {
+                width: 33.3333333333333333333%;
+                border-radius: 5px;
+                &[data-display] {
+                    width: 100%;
+                }
+            }
+        }
+        .option.selected {
+            border:1px solid #ececec;
         }
     }
 }

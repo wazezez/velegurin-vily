@@ -1,0 +1,79 @@
+.radio-card {
+    input {
+        &[type=radio] {
+            width: 1px;
+            opacity: 1;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &:checked {
+                & + label {
+                    color:$primary-color;
+                    background-color: rgba($primary-color,.1);
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    label {
+        background-color: #F6F7F8;
+        min-height: 56px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #333333;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 9px 16px;
+        padding-right: 38px;
+        cursor: pointer;
+        transition: 0.3s ease all;
+        transition-property: background-color, color;
+        &:before,
+        &:after {
+            border-radius: 50%;
+            position: absolute;
+            content:'';
+        }
+        &:before {
+            border: 1px solid #E2E2E2;
+            width: 22px;
+            height: 22px;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:after {
+            width: 12px;
+            height: 12px;
+            background-color: $primary-color;
+            opacity: 0;
+            transition: 0.3s ease opacity;
+            right: 21px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &_selected_success {
+        input {
+            &[type=radio] {
+                &:checked {
+                    & + label {
+                        color: #77B853;
+                        background-color: rgba(119, 184, 83, 0.08);
+                        font-weight: bold;
+                        &:after {
+                            background-color: #77B853;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

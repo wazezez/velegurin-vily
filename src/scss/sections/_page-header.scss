@@ -2,7 +2,11 @@
     background: linear-gradient(90.44deg, #7F10AD 26.83%, #540F9E 72.99%);
     padding-top: 12px;
     padding-bottom: 20px;
+    z-index: 99;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
     &__header {
     }
 
@@ -20,6 +24,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
+
         li {
             & + li {
                 margin-left: 24px;
@@ -113,6 +118,9 @@
         border-radius: 8px;   
         width: 100%;
         transition: 0.3s ease-in-out border-color;
+        @include media-breakpoint-down(md) {
+            width: 48px;
+        }
         &:hover {
             border-color: rgba(#fff,.2);
         }
@@ -125,6 +133,9 @@
         .burger-menu {
             margin-right: 12px;
             margin-top: -1px;
+            @include media-breakpoint-down(md) {
+                margin-right: 0px;
+            }
         }
     }
 
@@ -136,6 +147,14 @@
     // .page-header__profilemenu
 
     &__profilemenu {
+        // @include media-breakpoint-down(sm) {
+        //     position: fixed;
+        //     bottom: 0%;
+        //     left: 0;
+        //     width: 100%;
+        //     background-color: $primary-color;
+        //     padding: 8px 15px;
+        // }
     }
 
     &__catalog {

@@ -4,6 +4,16 @@ article {
     line-height: 28px;
     font-style: normal;
     color:$text-black;
+    @include media-breakpoint-down(lg) {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    @include media-breakpoint-down(md) {
+        font-size: 16px;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
     p {
         font-weight: inherit;
         font-size: inherit;  
@@ -13,5 +23,10 @@ article {
         margin-right: 0px;
         margin-bottom: 21px;
         text-align: center;
+    }
+    ul {
+        // @include media-breakpoint-down(sm) {
+        //     padding-left: 0px;
+        // }
     }
 }

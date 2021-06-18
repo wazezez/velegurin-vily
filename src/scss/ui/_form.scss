@@ -7,9 +7,17 @@
             font-size: 32px;
             line-height: 40px;
             margin-bottom: 24px;
+            @include media-breakpoint-down(md) {
+                font-size: 22px;
+                line-height: 1.4;
+                margin-bottom: 15px;
+            }
         }
         & + .form__fieldset {
             margin-top: 58px;
+            @include media-breakpoint-down(sm) {
+                margin-top: 35px;
+            }
         }
     }
     input {
@@ -19,6 +27,9 @@
         &[type=email] {
             margin:8px 0px;
         }        
+    }
+    .radio-card {
+        margin:8px 0px;
     }
     textarea {
         margin:8px 0px;
@@ -47,4 +58,8 @@
     &__action {
         margin-top: 17px;
     }
+}
+
+.order-form {
+    margin-top: 50px;
 }

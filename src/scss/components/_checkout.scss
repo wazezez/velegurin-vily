@@ -1,0 +1,61 @@
+.checkout {
+    &__row {
+        display: flex;
+        flex-direction: row;
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+        margin-left: -5px;
+    }
+
+    &__item {
+        position: relative;
+        margin: 3px 0px 3px 5px;
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+        }
+        input {
+            width: 1px;
+            opacity: 1;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            &:checked {
+                & + label {
+                    border-color:$primary-color;
+                    color:$primary-color;
+                    background-color: rgba($primary-color,.06);
+                }
+            }
+        }
+
+        label {
+            border-radius: 3px;
+            border:1px solid darken($bg-gray,10%);
+            height: 60px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            padding: 0px 25px;
+            color: darken($bg-gray,60%);
+            transition: 0.3s ease all;
+            font-weight: 500;
+            transition-property: color, border-color;
+            user-select: none;
+            text-align: center;
+            @include media-breakpoint-down(md) {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.checkout-row {
+     & + .row {
+         margin-top: 25px;
+     }
+}

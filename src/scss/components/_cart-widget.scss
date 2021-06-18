@@ -1,0 +1,132 @@
+
+.cart-widget {
+    background-color: #FFFFFF;
+    box-shadow: 0px 101px 130px rgba(0, 0, 0, 0.02), 0px 50.5493px 65.0635px rgba(0, 0, 0, 0.0152067), 0px 30.4485px 39.1912px rgba(0, 0, 0, 0.0130318), 0px 19.513px 25.1158px rgba(0, 0, 0, 0.0114179), 0px 12.6468px 16.278px rgba(0, 0, 0, 0.01), 0px 7.961px 10.2468px rgba(0, 0, 0, 0.0085821), 0px 4.57409px 5.88744px rgba(0, 0, 0, 0.00696822), 0px 2.01317px 2.59121px rgba(0, 0, 0, 0.00479335);
+    padding: 16px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    width: 376px;
+    opacity: 0;
+    transform: translateY(15px);
+    pointer-events: none;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out all;
+    transition-property: opacity,transform;
+    display: none;
+    &_visible {
+        transform: translateY(0px);
+        opacity: 1;
+        pointer-events: all;
+        display: block;
+    }
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+
+    // .cart-widget__title
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: #333333;
+        @include media-breakpoint-down(md) {
+            font-size: 18px;
+        }
+    }
+
+    // .cart-widget__action
+
+    &__action {
+        button {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 123%;
+            color: #FF1500;
+            background-color: transparent;
+            border:0px;
+            padding: 5px;
+            transition: 0.3s ease color;
+            &:hover {
+                color: darken(#FF1500,5%);
+            }
+        }
+    }
+
+    // .cart-widget__content
+
+    &__content {
+        margin-bottom: 16px;
+    }
+
+    // .cart-widget__list
+
+    &__list {
+        max-height: 344px;
+        overflow-y: auto;
+        margin-right:-5px;
+        margin-left: -5px;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-bottom: 15px;
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: #ececec;
+        }
+        &::-webkit-scrollbar-thumb
+        {
+          border-radius: 3px;
+          background-color: #ccc;
+        }
+    }
+
+    // .cart-widget__item
+
+    &__item {
+        & + & {
+            margin-top: 8px;
+        }
+    }
+
+    // .cart-widget__footer
+
+    &__footer {
+    }
+
+    // .cart-widget__total
+
+    &__total {
+        background-color: #FFFFFF;
+        box-shadow: 0px 101px 130px rgba(0, 0, 0, 0.02), 0px 50.5493px 65.0635px rgba(0, 0, 0, 0.0152067), 0px 30.4485px 39.1912px rgba(0, 0, 0, 0.0130318), 0px 19.513px 25.1158px rgba(0, 0, 0, 0.0114179), 0px 12.6468px 16.278px rgba(0, 0, 0, 0.01), 0px 7.961px 10.2468px rgba(0, 0, 0, 0.0085821), 0px 4.57409px 5.88744px rgba(0, 0, 0, 0.00696822), 0px 2.01317px 2.59121px rgba(0, 0, 0, 0.00479335);
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height:143%;
+        color: #333333;
+        padding: 13px 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 20px;
+        & + &  {
+            margin-top: 10px;
+        }
+    }
+
+    // .cart-widget__mainaction
+
+    &__mainaction {
+        margin-top: 12px;
+        .button {
+            width: 100%;
+        }
+    }
+}

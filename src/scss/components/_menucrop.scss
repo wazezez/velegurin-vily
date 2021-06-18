@@ -1,0 +1,47 @@
+.menu-crop {
+    position: relative;
+    button {
+        padding: 0;
+        margin: 0;
+        list-style:none;
+        background-color: transparent;
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border:0px;
+        outline: 0px;
+        cursor: pointer;
+    }
+    ul {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column !important;
+        position: absolute;
+        z-index: 99;
+        padding: 15px 0px !important;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0px 101px 130px rgb(0 0 0 / 2%), 0px 50.5493px 65.0635px rgb(0 0 0 / 2%), 0px 30.4485px 39.1912px rgb(0 0 0 / 1%), 0px 19.513px 25.1158px rgb(0 0 0 / 1%), 0px 12.6468px 16.278px rgb(0 0 0 / 1%), 0px 7.961px 10.2468px rgb(0 0 0 / 1%), 0px 4.57409px 5.88744px rgb(0 0 0 / 1%), 0px 2.01317px 2.59121px rgb(0 0 0 / 0%);
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.3s ease all;
+        transition-property: opacity,transform;
+        &.visible {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0px);
+        }
+        li {
+            width: 100%;
+            padding: 0px 15px;
+            & + li {
+                margin-left: 0 !important;
+                margin-top: 7px;
+            }
+        }
+    }
+}

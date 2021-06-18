@@ -1,0 +1,33 @@
+.chips {
+    padding: 0px 12px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-flex; 
+    flex-direction: row;
+    align-items: center;
+    border:1px solid $primary-color;
+    background-color: $primary-color;
+    color:#fff;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: 0.3s ease all;
+    transition-property: background-color,border-color;
+    margin: 2px 0px;
+    &:hover {
+        background-color: darken($primary-color,15%);
+        border-color: darken($primary-color,15%);
+    }
+    img {
+        height: 14px;
+        margin-left: 10px;
+    }
+    &_outline {
+        background-color: #fff;
+        color:$primary-color;
+        &:hover {
+            background-color: #fff !important;
+            color: darken($primary-color,15%);
+        }
+    }
+}

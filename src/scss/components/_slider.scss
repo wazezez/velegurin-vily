@@ -1,20 +1,33 @@
 .slider {
     position: relative;
+    // @include media-breakpoint-down(sm) {
+    //     overflow: hidden;
+    // }
     &__widget {
-        
+        @include media-breakpoint-down(sm) {
+            overflow: hidden;
+        }
     }
 
     &__nav {
         position: absolute;
         top: 0;
-        left: -20px;
-        width: calc(100% + 40px);
+        left: -30px;
+        width: calc(100% + 60px);
         height: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         pointer-events: none;
+        @media screen and (max-width:1280px) {
+            left: -20px;
+            width: calc(100% + 40px);    
+        }
+        @include media-breakpoint-down(sm) {
+            left: -7.5px;
+            width: calc(100% + 15px);
+        }
     }
 
     .slick-slide {
@@ -28,30 +41,54 @@
 
 .slider-button {
     border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        background-color: #fff;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border:0px;
-        cursor: pointer;
-        outline:0px;
-        transition: 0.3s ease all;
-        transition-property: background-color;
-        pointer-events: all;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border:0px;
+    cursor: pointer;
+    outline:0px;
+    transition: 0.3s ease all;
+    transition-property: background-color;
+    pointer-events: all;
+    padding: 0px;
+    svg {
+        width: 24px;
+        path {
+            transition: 0.3s ease fill;
+        }
+    }
+    &:hover {
+        background-color: $primary-color;
         svg {
             path {
-                transition: 0.3s ease fill;
+                fill: #fff;
             }
         }
-        &:hover {
-            background-color: $primary-color;
-            svg {
-                path {
-                    fill: #fff;
-                }
-            }
-        }
+    }
+}
+
+
+.slick-slide {
+    outline:0px;
+    &:focus,
+    &:hover,
+    &:active {
+        outline: 0px;
+    }
+    img {
+        display: inline-block;
+    }
+}
+
+.slick-slider,
+.slick-list {
+    touch-action: pan-y;
+    -ms-touch-action: pan-y;
+    @media (hover: hover) {
+        pointer-events: auto;
+    }
 }

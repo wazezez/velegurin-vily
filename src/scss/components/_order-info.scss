@@ -9,6 +9,9 @@
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 41px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 20px;
+        }
     }
 
     &__listing {
@@ -51,15 +54,24 @@
 
     &__action {
         margin-top: 22px;
+        // @include media-breakpoint-down(sm) {
+        //     width: 50%;
+        // }
     }
 
     &__button {
         padding: 0px 15px;
         width: 100%;
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
     }
 
     &__agreement {
         margin-top: 20px;
+        // @include media-breakpoint-down(sm) {
+        //     width: 50%;
+        // }
         .checkbox {
             label {
                 font-size: 12px;
@@ -69,9 +81,16 @@
     &__status {
         margin-top: 20px;
         .alert {
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+            }
             & + .alert {
                 margin-top: 10px;
             }
         }
+    }
+    &_sticky {
+        position: sticky;
+        top: 100px;
     }
 }

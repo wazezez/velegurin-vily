@@ -28,4 +28,7 @@ input {
     &[type=email] {
         @include input-style;
     }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

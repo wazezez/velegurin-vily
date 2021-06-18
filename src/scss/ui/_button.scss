@@ -20,17 +20,32 @@ button {
 	transition: 0.3s ease all;
 	transition-property: box-shadow, background-color;
 	cursor: pointer;
+	@include media-breakpoint-down(md) {
+		font-size: 16px;
+	}
+	@include media-breakpoint-down(sm) {
+		font-size: 14px;
+		padding: 0px 15px;
+		height: 50px;
+	}
 	&:hover {
 		color:#fff;
 		text-decoration: none;
-		background: linear-gradient(90.44deg, #7F10AD 36.83%, #540F9E 62.99%);
+		// background: linear-gradient(90.44deg, #7F10AD 36.83%, #540F9E 62.99%);
+		background: linear-gradient(90.44deg, #540F9E 26.83%, #7F10AD 72.99%);
 	}
 	&:focus {
 		outline:0px;
 		box-shadow: 0 0 0 3px rgba($primary-color,.25);
 	}
 	&_addtocart {
-
+		
+	}
+	&_active {
+		background: lighten(#7F10AD,10%);
+		&:hover {
+			background: lighten(#7F10AD,15%);
+		}
 	}
 	&_like {
 		width:$height;
@@ -40,7 +55,25 @@ button {
 			background: darken($bg-gray,5%);
 		}
 		&:focus {
-			box-shadow: 0 0 0 3px rgba(darken($bg-gray,10%),.25);
+			box-shadow: none;
+		}
+		svg {
+			path {
+				fill:transparent;
+				stroke: #949495;
+			}
+		}
+		&_active {
+			outline: 0px;
+			// &:hover {
+			// 	background: transparent;
+			// }
+			svg {
+				path {
+					fill: #FF1500 !important;
+					stroke: #FF1500 !important;
+				}
+			}
 		}
 	}
 
@@ -64,6 +97,7 @@ button {
 			background: darken($primary-color,7%);
 		}
 	}
+
 	&_text-large {
 		font-size: 18px;
 	}
@@ -90,6 +124,18 @@ button {
 			&:hover {
 				background: linear-gradient(90.44deg, #00B09B 36.83%, #96C93D 62.99%);
 			}
+			&:focus {
+				box-shadow: 0 0 0 3px rgba(#96C93D,.25);
+			}
         }
+		&_red {
+			background: linear-gradient(129.82deg, #E52D27 50%, #B31217 100%);
+			&:hover {
+				background: linear-gradient(90.44deg, #E52D27 36.83%, #B31217 62.99%);
+			}
+			&:focus {
+				box-shadow: 0 0 0 3px rgba(#B31217,.25);
+			}
+		}
     }
 }

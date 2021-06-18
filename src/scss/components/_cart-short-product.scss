@@ -1,0 +1,114 @@
+.cart-short-product {
+    background-color: #FFFFFF;
+    box-shadow: 0px 101px 130px rgba(0, 0, 0, 0.02), 0px 50.5493px 65.0635px rgba(0, 0, 0, 0.0152067), 0px 30.4485px 39.1912px rgba(0, 0, 0, 0.0130318), 0px 19.513px 25.1158px rgba(0, 0, 0, 0.0114179), 0px 12.6468px 16.278px rgba(0, 0, 0, 0.01), 0px 7.961px 10.2468px rgba(0, 0, 0, 0.0085821), 0px 4.57409px 5.88744px rgba(0, 0, 0, 0.00696822), 0px 2.01317px 2.59121px rgba(0, 0, 0, 0.00479335);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    // .cart-short-product__poster
+
+    &__poster {
+        width: 84px;
+        padding-right: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .cart-short-product__content
+
+    &__content {
+        flex-grow: 1;
+    }
+
+    // .cart-short-product__header
+
+    &__header {
+        margin-bottom: 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .cart-short-product__title
+
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;        
+        color: #333333;
+    }
+
+    // .cart-short-product__remove
+
+    &__remove {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 123%;
+        color: #FF1500;
+        background-color: transparent;
+        border:0px;
+        padding: 5px;
+        transition: 0.3s ease color;
+        &:hover {
+            color: darken(#FF1500,5%);
+        }
+    }
+
+    // .cart-short-product__description
+
+    &__description {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 145%;
+        color: #333333;
+        margin-bottom: 4px;
+    }
+
+    // .cart-short-product__price
+
+    &__price {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+        color: #333333;
+    }
+
+
+	&__discount {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-top: 5px;
+		flex-wrap: wrap;
+	}
+
+	&__oldprice {
+		font-weight: bold;		
+		font-size: 13px;
+		letter-spacing: 0.1px;
+		text-decoration-line: line-through;
+	}
+
+	&__discountvalue {
+		font-style: normal;
+        font-size: 11px;
+        line-height: 14px;
+		letter-spacing: 0.1px;	
+		color: $text-orange;
+		position: relative;
+		margin-left: 5px;
+		&:before {
+			content:'•';
+			margin-right: 5px;
+		}
+	}
+}

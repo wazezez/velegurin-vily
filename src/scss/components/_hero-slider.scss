@@ -1,8 +1,12 @@
 .hero-slider {
     margin-top: 30px;
     overflow: hidden;
+    @include media-breakpoint-down(sm) {
+        margin-top: 0px;
+    }
     &__item {
         max-width: 1200px;
+        padding: 0px 15px;
     }
     .slick-slide {
         margin: 0 12px;
@@ -11,5 +15,9 @@
 
     .slick-list {
         margin: 0 -12px;
+    }
+
+    .slick-arrow {
+        display: none;
     }
 }

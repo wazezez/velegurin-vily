@@ -1,3 +1,6 @@
 .page-breadcrumbs {
     border-bottom: 1px solid rgba(#E2E2E2,.52);
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
 }
